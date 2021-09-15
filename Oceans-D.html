@@ -844,14 +844,14 @@
       $(document).on('change', '#showChords', function() {
           if (this.checked) {
           $('.chord').show();
-          $('p').each(function () {
-            this.style.removeProperty('line-height');
-          });
+          // $('p').each(function () {
+          //   this.style.removeProperty('line-height');
+          // });
         } else {
           $('.chord').hide();
-          $('p').each(function () {
-            this.style.setProperty('line-height',1,'important');
-          });
+          // $('p').each(function () {
+          //   this.style.setProperty('line-height',1,'important');
+          // });
         }
       }); 
 
