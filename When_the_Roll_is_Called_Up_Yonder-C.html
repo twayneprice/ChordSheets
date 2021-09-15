@@ -830,16 +830,16 @@
       }); 
 
       $(document).on('change', '#showChords', function() {
-          if (this.checked) {
+        if (this.checked) {
           $('.chord').show();
-          // $('p').each(function () {
-          //   this.style.removeProperty('line-height');
-          // });
+          $('p').each(function () {
+            this.style.setProperty('padding-top','.75em','important');
+          });
         } else {
           $('.chord').hide();
-          // $('p').each(function () {
-          //   this.style.setProperty('line-height',1,'important');
-          // });
+          $('p').each(function () {
+            this.style.setProperty('padding-top','0','important');
+          });
         }
       }); 
 
