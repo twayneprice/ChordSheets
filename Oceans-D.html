@@ -844,16 +844,17 @@
       $(document).on('change', '#showChords', function() {
         if (this.checked) {
           $('.chord').show();
-          $('p').each(function () {
+          $('p:not(.nochords)').each(function () {
             this.style.setProperty('padding-top','.75em','important');
           });
         } else {
           $('.chord').hide();
-          $('p').each(function () {
+          $('p:not(.nochords)').each(function () {
             this.style.setProperty('padding-top','0','important');
           });
         }
       }); 
+
 
       $(document).on('change', '#transpose', function() {
         var currTranspose = parseInt($('#transpose').text())*(-1)
