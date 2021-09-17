@@ -782,7 +782,8 @@ $(document).ready(function(){
       song['flow'].split(' ').forEach((item) => {
         song['sections'].forEach((section) => {
           if (section['dupe']) {return};
-          if (section['shortNames'].includes(item)||section['name'].startsWith(item)) {
+          // if (section['shortNames'].includes(item)||section['name'].startsWith(item)) {
+          if (section['shortNames'].includes(item)) {
             $('#sections').append('      <h3><span>'+section['name']+':</span></h3>')
             section['lines'].forEach((line) => {
               if (line.replace(/\[(.+?)\]/g, "").trim() == '') {
