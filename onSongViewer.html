@@ -15,18 +15,18 @@
       <h2 class="title"></h2>
       <div id="artist" class="author"></div>
       <p class="nochords">
-        <span style="font-style:italic">Youtube <span id="youtube" style="font-style:italic"></span></span>
-        <span style="font-style:italic">Piano: <span id="piano" style="font-style:italic"></span></span>
-        <span style="font-style:italic">Capo: <span id="capo" style="font-style:italic"></span></span>
-      </p>
-      <p class="nochords">
         <span style="font-style:italic">Duration: <span id="duration" style="font-style:italic"></span></span>
         <span style="font-style:italic">Original Key: <span id="originalKey" style="font-style:italic"></span></span>
       </p>
       <p class="nochords">
-        <span style="font-style:italic">Flow: <span id="flow" style="font-style:italic"></span></span>
+        <span style="font-style:italic">Youtube <span id="youtube" style="font-style:italic"></span></span>
+        <span style="font-style:italic">Piano: <span id="piano" style="font-style:italic"></span></span>
+        <span style="font-style:italic">Capo: <span id="capo" style="font-style:italic"></span></span>
       </p>
       <div id="notes"></div>
+      <p class="nochords">
+        <span style="font-style:italic">Flow: <span id="flow" style="font-style:italic"></span></span>
+      </p>
       <div class="nochords">
         <table width="500px">
         </table>
@@ -782,7 +782,7 @@ $(document).ready(function(){
       song['flow'].split(' ').forEach((item) => {
         song['sections'].forEach((section) => {
           if (section['dupe']) {return};
-          if (section['shortNames'].includes(item)) {
+          if (section['shortNames'].includes(item)||section['name'].startsWith(item)) {
             $('#sections').append('      <h3><span>'+section['name']+':</span></h3>')
             section['lines'].forEach((line) => {
               if (line.replace(/\[(.+?)\]/g, "").trim() == '') {
