@@ -747,15 +747,20 @@ $(document).ready(function(){
         }
     });
 
+    // file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file=https://raw.githubusercontent.com/twayneprice/ChordSheets/main/onSong/Oceans.onsong
 
-    $.ajax({
-            url: '/onSong/Oceans.onsong',
-            type: 'get',
-            async: false,
-            success: function(data) {
-              onSong=data
-            }
-    });
+    if (getUrlParameter('file').length > 0 ) {
+      $.ajax({
+              url: getUrlParameter('file'),
+              type: 'get',
+              async: false,
+              success: function(data) {
+                onSong=data
+              }
+      });
+    }
+
+
     
     var song = parseOnSong(onSong);
 
