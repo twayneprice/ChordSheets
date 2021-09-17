@@ -49,7 +49,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <Script>
-onSong = `
+onSong1 = `
 Title: Oceans
 Artist: Hillsong United
 Key: D
@@ -98,7 +98,7 @@ And my [D]faith will be made stronger
 in the [A]presence of my Savior
 `;
 
-onSong1 = `
+onSong = `
 Title: 10,000 Reasons
 Artist: Matt Redman
 Key: B
@@ -747,14 +747,18 @@ $(document).ready(function(){
         }
     });
 
-    var client = new XMLHttpRequest();
-client.open('GET', '/Oceans.onsong');
-client.onreadystatechange = function() {
-  alert(client.responseText);
-}
-client.send();
 
+    $.ajax({
+            url: '/onSong/Oceans.onsong',
+            type: 'get',
+            async: false,
+            success: function(data) {
+              onSong=data
+            }
+    });
+    
     var song = parseOnSong(onSong);
+
 
     $('.title').text(song['title'])
     $('#artist').text(song['artist'])
