@@ -50,50 +50,75 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <Script>
 onSong = `
-Title: Amazing Grace - My Chains Are Gone 
-Artist: Chris Tomlin
-Key: A
-Capo: 2
-Tempo: 63
+Title: Even If 
+Artist: MercyMe
+Key: C
+Capo: 0
+Tempo: 83
 Time: 4/4
-Duration: 4:35
-Flow: V1 V2 C V3 C C V4
-OriginalKey: G
-Piano: -3
-/Play in position G Capo 2
-Youtube https://www.youtube.com/watch?v=Jbe7OruLk8I
+Duration: 4:14
+Flow: Intro V1 P1 C1 V2 P2 C2 B C2 Interlude O
+OriginalKey: F
+Piano: 0
+/Play in position C
+Youtube: https://www.youtube.com/watch?v=B6fA35Ved-Y
+
+Intro:
+[C...]    [Dm.]    [C...]    [Dm.] 
 
 Verse 1:
-[A]Amazing grace how [D..]sweet the [A..]sound
-That [A]saved a wretch like [E]me
-I [A]once was lost, but [D..]now I'm [A..]found
-Was [A..]blind but [E..]now I [A]see
+They say [C...]sometimes you win some
+Some - [Dm.]times you [G]lose some
+And right [Am..]now right [G..]now I'm losing [F]bad
+I've [C...]stood on this stage Night after [Dm.]night
+Re[G]minding the broken It'll be alright
+But right [Am..]now Oh [G..]right now I just [F]can't
+
+Pre 1:
+It's [G..]easy to sing When there's [Am..]nothing 
+to bring me [F]down 
+But [G..]what will I say
+When I'm [Am..]held to the flame 
+Like I [F]am right now
+
+Chorus 1:
+[C]I know You're able And I know You can
+[G]Save through the fire  With Your mighty hand
+But [Am]even if You don't My [F]hope is You alone[C]  
 
 Verse 2:
-'Twas [A]grace that taught my [D..]heart to [A..]fear
-And [A]grace my fears reli[E]eved
-How [A]precious did that [D..]grace ap[A..]pear
-The [A..]hour I fi[E..]rst bel[A]ieved
+They say it [C...]only takes a little faith 
+To[Dm.] move a [G]mountain
+Well good [Am..]thing a little faith 
+is [G..]all I h[F]ave right now
 
-Chorus:
-My chains are [D]gone, I've been set[A] free.
-My God, My[D] Savior has ransomed[A] me.
-And like a[D] flood his mercy[F#m] reigns.
-Un-ending[E] love, amazing [A]grace
+Pre 2:
+But [G..]God when You choose
+To leave [Am..]mountains unmov[F]able
+Oh [G..]give me the strength
+To be [Am..]able to sing It is [F]well with my soul
 
-Verse 3:
-The L[A]ord has promised [D..]good to [A..]me
-His w[A]ord my hope se[E]cures
-He w[A]ill my shield and [D..]portion [A..]be
-As [A..]long as l[E..]ife en[A]dures
+Chorus 2:
+[C]I know You're able  And I know You can
+[G]Save through the fire With Your mighty hand
+But [Am..]even if You don’t My [F]hope is You alone
+[C]I know the sorrow  I know the hurt
+Would [G]all go away If You'd just say the word
+But [Am..]even if You don’t My [F]hope is You alone
 
-Verse 4:
-[A]The earth shall soon diss[D..]olve like [A..]snow
-The s[A]un forbear to [E]shine
-But [A]God, Who called me [D..]here be[A..]low
-Will [A..]be for[E..]ever [A]mine
-Will [A..]be for[E..]ever [A]mine
-You [A..]are for[E..]ever [A]mine
+Bridge:
+You've been [Am..]faithful [F..]
+You've been [C..]good all of my [G..]days
+Jesus, [Am..]I will  [F..]cling to[C..]You come what [G..]may
+Cause I kn[F]ow You're able I k[G]now You can
+
+Interlude:
+[C..]    [G..]    [Am..]    [F..] 
+
+Outro:
+It is [C]well with my [G]soul
+It is [F]well, It is [G]well   [G]with my [C]soul
+
 `;
 
 onSong1 = `
@@ -813,7 +838,11 @@ $(document).ready(function(){
         .append('<label for="transpose">Tran: </label>')
         .append('<button type="button" id="transposeDown" name="transposeDown">D</button>')
         .append('<label id="transpose" name="transpose">0</label>')
-        .append('<button type="button" id="transposeUp">U</button>');
+        .append('<button type="button" id="transposeUp">U</button>')
+        .append('<br>')
+        .append('<label>Font: </label>')
+        .append('<button type="button" id="fontsizeDown">D</button>')
+        .append('<button type="button" id="fontsizeUp">U</button>');
 
     $('#condensed').prop("checked", true)
     $('#condensed').change();
