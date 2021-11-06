@@ -227,6 +227,7 @@ font-size: 21pt !important;
 }
 
 h3 {
+font-size:12pt !important;
 margin: 1pt;
 padding-top:.15em !important;
 margin-bottom:.5em !important;
@@ -982,6 +983,19 @@ $(document).on('change', '#showKeyChart', function() {
   }
   $('#keyChart').change();
 });
+
+$(document).on('click', '#fontsizeUp', function() {
+  var fontSize = parseInt($("div.page").css("font-size"));
+  fontSize = fontSize + 1 + "px";
+  $("div.page").css({'cssText':'font-size:'+fontSize+' !important'});
+}); 
+
+$(document).on('click', '#fontsizeDown', function() {
+  var fontSize = parseInt($("div.page").css("font-size"));
+  fontSize = fontSize - 1 + "px";
+  $("div.page").css({'cssText':'font-size:'+fontSize+' !important'});
+}); 
+
 
 function parseOnSong (inSong) {
   // console.log(inSong)
