@@ -51,53 +51,60 @@
 <Script>
 
 onSong = `
-Title:Rise Again
-Artist:Dallas Holm
-Key: G
-Capo: 2
-Tempo: 68
+Title:Man of Sorrows
+Artist:Hillsong
+Key: C
+Capo: 5
+Tempo: 72
 Time: 4/4
-Duration: 4:45
-Flow: Intro V1 C1 V2 C1 V3 C2
-Youtube: https://www.youtube.com/watch?v=WkIJfLfzZ0w
+Duration: 5:49
+Flow: V1 V2 C1 V3 B V4 C1
+Youtube: https://www.youtube.com/watch?v=LZjBJuHgXPE
 OriginalKey: G
-Piano: -5
+Piano: 0
+/Play in position G capo 5
 
-Intro:
-[D]  [E] [G]  [D] 
-
-Verse 1:
-[C]Go ahead, [D]drive the nails in my hand 
-Laugh at [Fm]me where you [C]stand.  [G]
-[C]Go ahead [D]say it isn't me 
-the [Fm]day will come [C]you will see  [G]
-
-Chorus 1:
-[C]Cause I'll rise [F]again[G]
-[D]There's no power on [G]earth can tie me down 
-[C]Yes I'll rise [F]again  
-[D..]death can't [G..]keep me in the ground[C]
+VERSE 1:
+[C]Man of sorrows [F]Lamb of [C]God
+[F]By His [C]own [G]betrayed
+[Am]The sin of man and [F]wrath of [Am]God
+Has [F]been on [G]Jesus [C]laid
 
 Verse 2:
-[D]Go ahead and [E]mock my name my [G]love 
-for you is [D]still the same
-[D]Go ahead and b[E]ury me 
-but v[G]ery soon I w[D]ill be free
+[C]Silent as He [F]stood [C]accused
+[F]Beaten [C]mocked and [G]scorned
+[Am]Bowing to the [F]Father's [Am]will
+He [F]took a [G]crown of [C]thorns
 
-Verse 3:
-[D]Go ahead and [E]say I'm dead and gone
-B[G]ut you will see [D]that you were wrong
-[D]Go ahead try [E]to hide the sun 
-but[G] all will se[D]e that I'm the one
+CHORUS 1:
+Oh that [Am]rugged [F]cross
+My [C]salvat[G]ion
+Where Your[Am] love poured [F]out over[G] me
+Now my [F]soul cries[C] out
+Hal[G]leluj[Am]ah
+Praise and [F]honour [G]unt[C]o Thee
 
-Chorus 2:
-[D]Cause I'll come ag[G]ain             
-[Em]There's no power [A]on earth can keep me [D]back
-[Em]Yes I'll come again 
-[A]come to take my pe[D]ople back
-[D]Yes I'll come [G]again 
-[Em..]come to [A..]take my people [D]back
+VERSE 3:
+[C]Sent of heaven [F]God's ow[C]n Son
+[F]To purc[C]hase[G] and redeem
+[Am]And reconcile [F]the very [Am]ones
+Who[F] nailed[G] Him to t[C]hat tree
 
+BRIDGE:
+Now my [Am]debt is [F]paid
+It is [C]paid in [G]full
+By the [Am]precious [F]blood
+That my [C]Jesus s[G]pilled
+Now the [Am]curse of [F]sin
+Has no [C]hold on [G]me
+Whom the[Am] Son sets [F]free
+Oh is [C]free i[G]ndeed
+
+VERSE 4:
+[C]See the stone is [F]rolled [C]away
+Be[F]hold the [C]empty t[G]omb
+[Am]Hallelujah [F]God be [Am]praised
+He's [F]risen [G]from the [C]grave
 `
 onSong2 = `
 Title: There Was Jesus
@@ -396,6 +403,10 @@ font-size:17pt !important;
 line-height:17pt !important;
 font-weight: bold !important;
 z-index:-10 !important;
+}
+
+.nn {
+  font-size:11pt !important;
 }
 
 p span {
@@ -935,7 +946,21 @@ $(document).ready(function(){
               } else {
                 chordline = ''
               }
-              $('#sections').append('      <p'+chordline+'><span>'+line.replaceAll('[','<span class="chord">').replaceAll(']','</span>')+'</span></p>')
+              // console.log(line)
+              // lineText = '      <p'+chordline+'><span>'+line.replaceAll('[','<span class="chord"><span class="nn">1</span>').replaceAll(']','</span>')+'</span></p>'
+              lineText = '      <p'+chordline+'><span>'+line.replaceAll('[','<span class="chord">').replaceAll(']','</span>')+'</span></p>'
+              currTranspose = parseInt($('#transpose').text())*(-1)
+              console.log(currTranspose)
+              // console.log(transposeNote('D',currTranspose))
+              for (var i = 0; i < Keys[song['key']].length; i++) { 
+                // lineText = lineText.replaceAll('<span class="chord">'+Keys[song['key']][i],'<span class="chord"><span class="nn">'+(i+1)+'</span>'+Keys[song['key']][i])
+              // console.log(Keys['D'][i]); 
+              }
+
+
+              // console.log(lineText)
+              $('#sections').append(lineText)
+              // $('#sections').append('      <p'+chordline+'><span>'+line.replaceAll('[','<span class="chord">').replaceAll(']','</span>')+'</span></p>')
             });
             $('#sections').append('<p class="nochords"><span></span></p>')
           }
