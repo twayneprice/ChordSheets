@@ -51,39 +51,61 @@
 <Script>
 
 onSong = `
-Title: Open the Eyes of My Heart
-Artist: Michael W. Smith
-Key: E
-capo: 0
-Tempo: 108
+Title: No Longer Slaves
+Artist: Zach Williams
+Key: C#
+Capo: 1
+Tempo: 74
 Time: 4/4
-Duration: 5:11
-Flow: V V C V V C C B B V V
-Youtube: https://www.youtube.com/watch?v=x0orH2uloeI
-OriginalKey: E
-Piano: +4  
-/Play in position C Capo 4
+Duration: 06:15
+Flow: V1 C1 V2 C1 I2 B C1
+Youtube: https://www.youtube.com/watch?v=f8TkUMJtK5k
+OriginalKey: C#
+Piano: +1  
+/Play in position C capo 1
 
-Verse:
-[E]Open the eyes of my heart, Lord,
-[E] Open the eyes of my heart,
-I want to [C#m]see You   [A]
-I want to see [E]You  [E]
+Verse 1:
+You u[C#]nravel me, with a [C#]melody
+You s[F#..]urround me [G#..]with a [C#]song
+Of de[C#]liverance, from my [C#]enemies    
+T[F#..]ill all my [G#..]fears are [C#]gone
 
-Chorus:
-To see You [B]high and lifted [C#m]up
-[A]Shining in the light of your g[B]lory
-[B]Pour out Your power and [C#m]love,
-As we sing holy, [F#m]holy, hol[B]y
+Chorus 1:
+I’m [F#..]no longer a [G#..]slave to [C#]fear
+[A#m..]I am a [G#..]child of [C#]God
+I’m [F#..]no longer a [G#..]slave to [C#]fear
+[A#m..]I am a [G#..]child of [C#]God
+
+Interlude 1:
+[A#m.]     [G#.]     [C#..]     [F#.] 
+(repeat 2x)
+
+Verse 2:
+F[C#]rom my Mother’s womb
+Y[E#m]ou have chosen me
+L[F#..]ove has c[G#..]alled my [C#]name
+I’ve[C#] been born again, into your[E#m] family
+Your b[F#..]lood flows t[G#..]hrough my v[C#]eins
+
+Verse 3:
+[C#]I am surrounded [C#]by the arms of the Father
+[E#m]I am surrounded [E#m]by songs of deliverance
+[A#m..]We've [G#..]been [C#..]liber[F#..]ated
+[A#m..]from [G#..]our bon[C#..]dage  [F#..] 
+[A#m..]We're t[G#..]he sons[C#..] and the[F#..] daughters                       
+[A#m..]Let us [G#..]sing our [C#..]freedom   [F#..]                              
+
+
+Interlude 2:
+[A#m..]Ohhh,     [G#..]     Ohhh[C#..]     [F#..] 
 
 Bridge:
-[E]Holy holy holy
-[E]Holy holy holy
-[C#m]Holy holy [A]holy
-I want to [E]see You  [E]
-
-
-
+[A#m..]You split the [G#..]sea 
+so I could [C#..]walk right t[F#..]hrough it
+[A#m..]My fears are d[G#..]rowned in perfe[C#..]ct love     [F#..] 
+[A#m..]You rescued [G#..]me and I will [C#..]stand and s[A#m..]ing
+[F#..]I am a c[G#..]hild of [C#]God
+(Repeat 5x)
 
 
 `
@@ -1087,7 +1109,7 @@ $(document).on('click', '#transposeDown', function() {
 	$('#transpose').text(newTranspose)
   $('#transpose').change();
 
-  $('#nashville').prop("checked", false)
+  $('#nashville').change()
 }); 
 
 $(document).on('click', '#transposeUp', function() {
@@ -1096,7 +1118,7 @@ $(document).on('click', '#transposeUp', function() {
 	$('#transpose').text(newTranspose)
   $('#transpose').change();
 
-  $('#nashville').prop("checked", false)
+  $('#nashville').change()
 }); 
 
 
