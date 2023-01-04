@@ -8,14 +8,14 @@ def printAll(inUrl):
     files = getFileList(inUrl)
     files = files#[5:6]
     for fileDict in files:
-        print(fileDict)
+        # print(fileDict)
 
         name = fileDict['name'].split('.')[0]
         file = fileDict['download_url']
 
         dir = './prints/orig/'
         cmd = 'google-chrome --headless --disable-gpu --print-to-pdf="'+dir+name+'.pdf" "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'"'
-        print(cmd)
+        # print(cmd)
         os.system(cmd)
 
         res = requests.get(file, headers={'User-Agent':'Mozilla/5.0'})
@@ -28,14 +28,12 @@ def printAll(inUrl):
 
         dir = './prints/capo/'
         cmd = 'google-chrome --headless --disable-gpu --print-to-pdf="'+dir+name+capo+'.pdf" "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'"'
-        print(cmd)
+        # print(cmd)
         os.system(cmd)
 
 
         # break
 
-def getPdfColumns(pdfName):
-    print(pdfName)
 
 def getFileList(inUrl):
     data = {}
@@ -55,4 +53,3 @@ def getFileList(inUrl):
 
 if __name__ == "__main__":
     printAll("https://api.github.com/repos/twayneprice/ChordSheets/contents/onSong")
-    # getPdfColumns("./prints/orig/A Hallelujah Christmas.pdf")

@@ -26,6 +26,7 @@
       <div id="notes"></div>
       <p class="nochords">
         <span style="font-style:italic">Flow: <span id="flow" style="font-style:italic"></span></span>
+        <span style="font-style:italic">Printed: <span id="datetime">1/4/2023</span></span>
       </p>
       <div class="nochords">
         <table width="500px">
@@ -802,7 +803,8 @@ $(document).ready(function(){
     $('#capo').text(song['capo'])
     $('#youtube').text(song['youtube'])
     $('#flow').text(song['flow'])
-    // $('#notes').text(song['notes'])
+    $('#datetime').text((new Date()).toDateString())
+
     song['notes'].forEach((note) => {
       $('#notes').append('<p class="nochords"><span style="font-style:italic">'+note+'</span></p>')
     });
