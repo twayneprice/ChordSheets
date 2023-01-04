@@ -6,7 +6,7 @@
         const data = await response.json();
         let htmlString = '<ul><font size="+2">';
         for (let file of data) {
-          htmlString += `<li><a href="onSongViewer.html?file=https://twayneprice.github.io/ChordSheets/${file.path}?v=${Math.random()}">${file.name}</a></li>`;
+          htmlString += `<li><a href="onSongViewer.html?file=https://twayneprice.github.io/ChordSheets/${file.path}&v=${Math.random()}">${file.name}</a></li>`;
         }
         htmlString += '</font></ul>';
         document.getElementsByTagName('body')[0].innerHTML = htmlString;
