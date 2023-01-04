@@ -6,7 +6,7 @@ from operator import itemgetter
 
 def printAll(inUrl):
     files = getFileList(inUrl)
-    files = files[19:20]
+    files = files#[42:43]
     for fileDict in files:
         name = fileDict['name'].split('.')[0]
         file = fileDict['download_url']
