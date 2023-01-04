@@ -43,7 +43,8 @@
       </div>
       <div id="sections">
       </div>
-      <p>&nbsp;</p>
+      <div id="end"></div>
+        <!-- <p>&nbsp;</p> -->
     </div>
   </div>
 </div>
@@ -925,9 +926,25 @@ $(document).ready(function(){
     $('#transpose').text(getUrlParameter('transpose'))
     $('#transpose').change();
   }
+
+  if (getUrlParameter('fontAdjust')) {
+    var fontSize = parseInt($("div.page").css("font-size"));
+    // var fontSize = parseInt($("div.page").css("font-size")+ parseInt(getUrlParameter('fontAdjust')));
+    console.log(getUrlParameter('fontAdjust'))
+    console.log(fontSize)
+    fontSize = (fontSize + parseInt(getUrlParameter('fontAdjust'))) + "px";
+    console.log(fontSize)
+    $("div.page").css({'cssText':'font-size:'+fontSize+' !important'});
+
+  }
+
   $('#nashville').prop("checked", true)
     $('#nashville').change();
 
+  while ($('#end').offset().left > 500) {
+    $('#fontsizeDown').trigger('click');
+    $(document).change()
+  } 
 });
 
 
@@ -1003,7 +1020,7 @@ $(document).on('change', '#nashville', function() {
         if (origChords.length > 1){
           newChord = newChord + '/' + ((Keys[key]).indexOf(origChords[1])+1);
         }
-        console.log(origChords,newChord);
+        // console.log(origChords,newChord);
 
         if (newChord == 0) {
           newChord = ''
