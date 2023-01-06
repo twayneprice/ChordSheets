@@ -54,51 +54,63 @@
 <Script>
 
 onSong = `
-Title: Beautiful Star of Bethlehem
-Artist: R. Fisher Boyce
-Key: C
+Title: Eye Of The Storm
+Artist: Ryan Stevenson
+Key: F
 Capo: 0
-Tempo: 80
-Time: 6/8
-Duration: 03:43
-Flow: V1 C V2 C V3 C C
-Youtube: https://www.youtube.com/watch?v=nRvfa7nmJ-c
-OriginalKey: D
-Piano: 0
-/D is 2 Major
+Tempo: 73
+Time: 4/4
+Duration: 05:31
+/Piano: +5
+/Play in position C capo 5
+/Youtube https://www.youtube.com/watch?v=-sx8wTnnfSc
+
+Flow: I V1 C V2 C B V3 C C
+
+Intro:
+[F]      [Bb]      [F] 
+[F]      [Bb]      [F] 
 
 Verse 1:
-Beautiful Sta[C]r of Bethlehem
-Shining a[F..]far through shadows [C..]dim
-Giving the l[C..]ight to thos[D..]e who long have g[G]one
-Guiding the W[C..]ise Men on their w[C..]ay
-Unto the p[F..]lace where Jesus l[C..]ay
-Beautiful S[C..]tar of Bethle[D.]hem, s[G.]hine [C.]on  [F.]     [C..] 
-
+[F]When the solid ground is falling out 
+from [Bb]underneath my feet
+[F]Between the black skies, and my red eyes, 
+[C]I can barely see
+[Dm]When I realize I've been let down 
+by my [Bb]friends and my family
+[F]I can hear the [C]rain reminding me[F] 
+ 
 Chorus:
-Oh Beautiful [C.]Star  (Beautiful, Be[G.]autiful [C..]Star)         
-Of Bet[C.]hlehem (Star [G.]of B[C..]ethlehem)
-Shine upon [C..]us until the gl[D..]ory d[G]awns
-Give us the l[C..]amp to light the [C..]way
-Unto the l[F..]and of perfect da[C..]y
-Beautiful St[C..]ar of Bethleh[D.]em, s[G.]hine [C.]on  [F.]     [C] 
-
+[F]In the eye of the storm, [F]You remain in control
+[C]In the middle of the war, [C]You guard my soul
+You alone are the [F]anchor, 
+when my [C]sails are [Dm]torn
+Your love [C]surrounds me in the [F]eye of the storm
+ 
 Verse 2:
-Beautiful [C]Star the hope of li[C]ght
-Guiding the p[F..]ilgrims through the [C..]night
-Over the[C..] mountains 'til the b[D..]reak of d[G]awn
-Into the li[C..]ght of perfect da[C..]y
-It will give [F..]out a lovely [C..]ray
-Beautiful S[C..]tar of Bethle[D.]hem, s[G.]hine [C.]on  [F.]     [C..]
+[F]Mmm, when my hopes and dreams 
+are far from me, and [Bb]I'm runnin' out of faith
+[F]I see the future I picture [C]slowly fade away
+[Dm]And when the tears of pain and heartache 
+are [Bb]pouring down my face
+[F]I find my [C]peace in [F]Jesus' name
+ 
+Bridge:
+[Bb]Oooh    [F]        [C]Oooh, in the eye of the storm
+[Bb]Oooh    [F]        [C]I know you're watching me yah-ee
+[Bb]Oooh    [F]        [C]        [Dm]Whoa...in the eye of the storm
+[Bb]        [F]        [C] 
 
 Verse 3:
-Beautiful [C]Star the hope of re[C]st
-For the red[F..]eemed, the good and the b[C..]lessed
-Yonder in g[C..]lory when the cro[D..]wn is [G]won
-Jesus is now [C..]that star divi[C..]ne
-Brighter and [F..]brighter He will s[C..]hine
-Beautiful S[C..]tar of Bethle[D.]hem, s[G.]hine [C.]on  [F.]     [C..]
-
+[F]When they let me go and I just don't know 
+how I'm [Bb]gonna make ends meet
+[F]I did my best, but now I'm scared to death 
+that we [C]might lose everything
+[Dm]And when a sickness takes my child away, 
+and there's [Bb]nothing I can do
+[F]My only ho[C]pe is to trust Y[F]ou
+[F]I trust You, Lord
+ 
 `
 
 onSong1 = `
@@ -301,23 +313,29 @@ font-family: Helvetica, Arial, sans-serif !important;
 line-height: 1 !important;
 padding-top:.75em !important;
 }
-p:last-child {
-  display: inline;
-}
+/* p:last-child {
+  display: none;
+} */
 #end {
   display: inline;
 }
 @media print {
-.page {
+  /* p:last-child {
+  display: none;
+} */
+/* .page {
     margin: 0.025in !important;
     width: 8.5in !important;
     border:solid 0px #666 !important;
     padding: 0.25in !important;
-}
-p {
-      padding: 2px; 
-    }
-
+} */
+/* p {
+margin:0 !important;
+margin-left:0px !important;
+line-height: 1 !important;
+padding-top:.8em !important;
+padding-bottom:.0em !important;
+} */
     /* @media print {
   html, body {
         border: 1px solid white;
@@ -811,6 +829,7 @@ $(document).ready(function(){
     }
 
     onSong = onSong.trim()
+    // console.log(onSong)
     
     var song = parseOnSong(onSong);
 
@@ -858,7 +877,7 @@ $(document).ready(function(){
               $('#sections').append(lineText)
               // $('#sections').append('      <p'+chordline+'><span>'+line.replaceAll('[','<span class="chord">').replaceAll(']','</span>')+'</span></p>')
             });
-            $('#sections').append('<p class="nochords"><span></span></p>')
+            // $('#sections').append('<p class="nochords"><span></span></p>')
           }
         })
       })
@@ -969,8 +988,8 @@ $(document).ready(function(){
   } 
 
   // $('#fontsizeDown').trigger('click');
-  $('#fontsizeDown').trigger('click');
-    $(document).change()
+  // $('#fontsizeDown').trigger('click');
+    // $(document).change()
 });
 
 
@@ -1155,7 +1174,9 @@ function parseOnSong (inSong) {
   song['sections'].forEach((section,index) => {
   });
 
-  console.log(song)
+  // $('.nochords').last().remove();
+
+console.log(song)
   return song
 }
 
