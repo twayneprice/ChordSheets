@@ -54,63 +54,83 @@
 <Script>
 
 onSong = `
-Title: Eye Of The Storm
-Artist: Ryan Stevenson
-Key: F
-Capo: 0
-Tempo: 73
+Title: This Is Amazing Grace
+Artist: Phil Wickham
+Key: C
+Capo: 5
+Tempo: 103
 Time: 4/4
-Duration: 05:31
-/Piano: +5
-/Play in position C capo 5
-/Youtube https://www.youtube.com/watch?v=-sx8wTnnfSc
-
-Flow: I V1 C V2 C B V3 C C
+Duration: 4:45
+Flow: I V1 C1 V2 C2 B1 B2 C3
+Youtube: https://www.youtube.com/watch?v=BXLHITKESpc
+OriginalKey: G
+Piano: 0
+Score: https://musescore.com/user/38235231/scores/942626
+/Play in position G capo 5
+/Melody: 4 323 323 123 56
+/Melody: 4 323 323 123 65
 
 Intro:
-[F]      [Bb]      [F] 
-[F]      [Bb]      [F] 
+[Melody][C]         [F]         [C]         [F]
 
 Verse 1:
-[F]When the solid ground is falling out 
-from [Bb]underneath my feet
-[F]Between the black skies, and my red eyes, 
-[C]I can barely see
-[Dm]When I realize I've been let down 
-by my [Bb]friends and my family
-[F]I can hear the [C]rain reminding me[F] 
- 
-Chorus:
-[F]In the eye of the storm, [F]You remain in control
-[C]In the middle of the war, [C]You guard my soul
-You alone are the [F]anchor, 
-when my [C]sails are [Dm]torn
-Your love [C]surrounds me in the [F]eye of the storm
- 
-Verse 2:
-[F]Mmm, when my hopes and dreams 
-are far from me, and [Bb]I'm runnin' out of faith
-[F]I see the future I picture [C]slowly fade away
-[Dm]And when the tears of pain and heartache 
-are [Bb]pouring down my face
-[F]I find my [C]peace in [F]Jesus' name
- 
-Bridge:
-[Bb]Oooh    [F]        [C]Oooh, in the eye of the storm
-[Bb]Oooh    [F]        [C]I know you're watching me yah-ee
-[Bb]Oooh    [F]        [C]        [Dm]Whoa...in the eye of the storm
-[Bb]        [F]        [C] 
+[C]Who breaks the power, of [C]sin and darkness
+[F]Whose love is mighty, and [F]so much stronger
+[Am]The King of Glory, [G]the King above all kings [F]
+[C]Who shakes the whole earth, [C]with holy thunder
+[F]Who leaves us breathless, in [F]awe and wonder
+[Am]The King of Glory, [G]the King above all kings [F]
 
-Verse 3:
-[F]When they let me go and I just don't know 
-how I'm [Bb]gonna make ends meet
-[F]I did my best, but now I'm scared to death 
-that we [C]might lose everything
-[Dm]And when a sickness takes my child away, 
-and there's [Bb]nothing I can do
-[F]My only ho[C]pe is to trust Y[F]ou
-[F]I trust You, Lord
- 
+Chorus 1:
+[F]   This is amazing gr[C]ace
+[C]This is unfailing l[F]ove
+[F]That You would take my pl[Am]ace
+[Am]That You would bear my cr[G]oss
+[G]You would lay down Your l[C]ife
+[C]That I would be set fr[F]ee
+[Am]Jesus, I sing for,
+[G]All that You've done for me[C]         [F]        [Melody]
+
+Verse 2:
+[C]Who brings our chaos, [C]back into order
+[F]Who makes the orphan, a [F]son and daughter
+[Am]The King of Glory, [G]the King of Glory   [F]
+[C]Who rules the nations, [C]with truth and justice
+[F]Shines like the sun in, [F]all of its brilliance
+[Am]The King of Glory, [G]the King above all kings[F]
+
+Chorus 2:
+[F]   This is amazing gr[C]ace
+[C]This is unfailing l[F]ove
+[F]That You would take my pl[Am]ace
+[Am]That You would bear my cr[G]oss
+[G]You would lay down Your l[C]ife
+[C]That I would be set fr[F]ee
+[Am]Jesus, I sing for,
+[G]All that You've done for me[C]
+
+Bridge 1:
+[C]Worthy is the Lamb who was [C]slain
+[F]Worthy is the King who conquered[F] the grave
+[C]Worthy is the Lamb who was [C]slain
+[F]Worthy is the King who conquered[F] the grave
+
+Bridge 2:
+[C]Worthy is the Lamb who was [C]slain
+[F]Worthy is the King who conquered[F] the grave
+[Am]Worthy is the Lamb who was slain[G]
+[G]Worthy, [F]Worthy, [F]Worthy
+
+Chorus 3:
+[F]   This is amazing gr[C]ace
+[C]This is unfailing l[F]ove
+[F]That You would take my pl[Am]ace
+[Am]That You would bear my cr[G]oss
+[G]You would lay down Your l[C]ife
+[C]That I would be set fr[F]ee
+[Am]Jesus, I sing for,
+[G]All that You've done for me[C]       [F]       [C]       [F]
+[Melody]
 `
 
 onSong1 = `
@@ -198,13 +218,10 @@ There was Jesus
     text-align:right;
   }
   @media print {
-    .page {
-      margin: 0;
-      width: 7in;
-      border: none;
-      padding: 0;
-    }
-  }
+  @page { margin: 0; }
+  body { margin: 1.6cm; }
+}            
+            
 body {
 font-size: 14pt !important;
 font-family: Helvetica, Arial, sans-serif !important;
@@ -227,7 +244,19 @@ table { border: none; border-collapse: collapse; }
 table td { border-left: 1px solid #000; }
 table td:first-child { border-left: none; }
 
-@page { margin: 0; };
+@page { 
+  font-family:Helvetica, Arial, sans-serif; 
+font-size:15pt; 
+border:solid 0px #666 !important;
+width: 8.5in !important;
+height: 11.0in !important;
+padding: 0.25in !important;
+margin: 0.025in !important;
+column-count: 2 !important;
+column-gap: 5px !important;
+column-fill: balance !important;
+column-rule: 1px solid black !important;
+};
 body { margin: 0; };
 
 .title {
@@ -321,43 +350,7 @@ padding-top:.75em !important;
 #end {
   display: inline;
 }
-@media print {
-  /* p:last-child {
-  display: none;
-} */
-/* .page {
-    margin: 0.025in !important;
-    width: 8.5in !important;
-    border:solid 0px #666 !important;
-    padding: 0.25in !important;
-} */
-/* p {
-margin:0 !important;
-margin-left:0px !important;
-line-height: 1 !important;
-padding-top:.8em !important;
-padding-bottom:.0em !important;
-} */
-    /* @media print {
-  html, body {
-        border: 1px solid white;
-        height: 99%;
-        page-break-after: avoid;
-        page-break-before: avoid;
-        padding: 25px; 
-     }
-     .page {
-        border: 1px solid white;
-        height: 99%;
-        page-break-after: avoid;
-        page-break-before: avoid;
-        padding: 25px; 
-     }
-     p {
-      padding: 25px; 
-    }
-     */
-}
+
 </style>
 <Script>
 
@@ -976,15 +969,21 @@ $(document).ready(function(){
   $('#nashville').prop("checked", true)
     $('#nashville').change();
 
-  while ($('#end').offset().left > 500) {
-    $('#fontsizeDown').trigger('click');
+console.log($('p:last').offset());
+console.log($('#end').offset());
+  // while ($('#end').offset().left > 500) {
+  //   // $('#fontsizeDown').trigger('click');
+  //   // $(document).change()
+  // } 
+console.log($('p:last').offset());
+  $('#fontsizeDown').trigger('click');
+  $('#fontsizeDown').trigger('click');
+  $('#fontsizeDown').trigger('click');
     $(document).change()
-  } 
+    console.log($('p:last').offset());
+console.log($('#end').offset());
 
-  // $('#fontsizeDown').trigger('click');
-  // $('#fontsizeDown').trigger('click');
-    // $(document).change()
-});
+  });
 
 
 $(document).on('change', '#condensed', function() {
