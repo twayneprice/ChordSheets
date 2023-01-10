@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title class="title"></title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	</head>
+	<body>
+
+<div id="content">
+  <ul id="navigation"></ul>
+	<div id="pages">
+    <div class="page">
+      <div class="metadata">
+      </div>
+      <h2 class="title"></h2>
+      <div id="artist" class="author"></div>
+      <p class="nochords">
+        <span style="font-style:italic">Duration: <span id="duration" style="font-style:italic"></span></span>
+        <span style="font-style:italic">Original Key: <span id="originalKey" style="font-style:italic"></span></span>
+      </p>
+      <p class="nochords">
+        <span style="font-style:italic">Youtube <span id="youtube" style="font-style:italic"></span></span>
+        <span style="font-style:italic">Piano: <span id="piano" style="font-style:italic"></span></span>
+        <span style="font-style:italic">Capo: <span id="capo" style="font-style:italic"></span></span>
+      </p>
+      <div id="notes"></div>
+      <p class="nochords">
+        <span style="font-style:italic">Flow: <span id="flow" style="font-style:italic"></span></span>
+        <br /><span style="font-style:italic">Printed: <span id="datetime">1/4/2023</span></span>
+      </p>
+      <div class="nochords">
+        <table width="500px">
+        </table>
+        <table id="keyChart" name="keyChart" >
+          <tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>_____</th>
+              <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr>
+          <tr><td>C</td><td>Dm</td><td>Em</td><td>F</td><td>G</td><td>Am</td><td>Bdim</td><td></td>
+              <td>D</td><td>Em</td><td>F#m</td><td>G</td><td>A</td><td>Bm</td><td>C#dim</td></tr>
+          <tr><td>E</td><td>F#m</td><td>G#m</td><td>A</td><td>B</td><td>C#m</td><td>D#dim</td><td></td>
+              <td>F</td><td>Gm</td><td>Am</td><td>Bb</td><td>C</td><td>Dm</td><td>Edim</td></tr>
+          <tr><td>G</td><td>Am</td><td>Bm</td><td>C</td><td>D</td><td>Em</td><td>F#dim</td><td></td>
+              <td>A</td><td>Bm</td><td>C#m</td><td>D</td><td>E</td><td>F#m</td><td>G#dim</td></tr>
+        </table>
+      </div>
+      <div id="sections">
+      </div>
+      <div id="end"></div>
+        <!-- <p>&nbsp;</p> -->
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<Script>
+
+onSong = `
+Title: Beautiful Star of Bethlehem
+Artist: R. Fisher Boyce
+Key: C
+Capo: 0
+Tempo: 80
+Time: 6/8
+Duration: 03:43
+Flow: V1 C V2 C V3 C C
+Youtube: https://www.youtube.com/watch?v=nRvfa7nmJ-c
+OriginalKey: D
+Piano: 0
+/D is 2 Major
+
+Verse 1:
+Beautiful Sta[C]r of Bethlehem
+Shining a[F..]far through shadows [C..]dim
+Giving the l[C..]ight to thos[D..]e who long have g[G]one
+Guiding the W[C..]ise Men on their w[C..]ay
+Unto the p[F..]lace where Jesus l[C..]ay
+Beautiful S[C..]tar of Bethle[D.]hem, s[G.]hine [C.]on  [F.]     [C..] 
+
+Chorus:
+Oh Beautiful [C.]Star  (Beautiful, Be[G.]autiful [C..]Star)         
+Of Bet[C.]hlehem (Star [G.]of B[C..]ethlehem)
+Shine upon [C..]us until the gl[D..]ory d[G]awns
+Give us the l[C..]amp to light the [C..]way
+Unto the l[F..]and of perfect da[C..]y
+Beautiful St[C..]ar of Bethleh[D.]em, s[G.]hine [C.]on  [F.]     [C] 
+
+Verse 2:
+Beautiful [C]Star the hope of li[C]ght
+Guiding the p[F..]ilgrims through the [C..]night
+Over the[C..] mountains 'til the b[D..]reak of d[G]awn
+Into the li[C..]ght of perfect da[C..]y
+It will give [F..]out a lovely [C..]ray
+Beautiful S[C..]tar of Bethle[D.]hem, s[G.]hine [C.]on  [F.]     [C..]
+
+Verse 3:
+Beautiful [C]Star the hope of re[C]st
+For the red[F..]eemed, the good and the b[C..]lessed
+Yonder in g[C..]lory when the cro[D..]wn is [G]won
+Jesus is now [C..]that star divi[C..]ne
+Brighter and [F..]brighter He will s[C..]hine
+Beautiful S[C..]tar of Bethle[D.]hem, s[G.]hine [C.]on  [F.]     [C..]
+
+`
+
+onSong1 = `
+Title: There Was Jesus
+Artist: Zach Williams, Dolly Parton
+Key: C#
+capo: 1
+Tempo: 98
+Time: 4/4
+Duration: 3:43
+Flow: I V1 V2 C1 V3 C1 B C2
+Youtube: https://www.youtube.com/watch?v=F_cXBD1LkrI
+OriginalKey: C#
+Piano: +1  
+/Play in position C capo 1
+
+Intro:
+[C#]    [C#]  
+ 
+Verse 1:
+Every [C#]time I tried to make it on my [C#]own
+Every [C#]time I tried to stand and start to [C#]fall
+And all those [F#]lonely roads 
+that I have travelled [D#m]on
+There was [C#]Jesus
+ 
+Verse 2:
+When the [C#]life I built came crashing to the [C#]ground
+When the [C#]friends I had were nowhere to be [C#]found
+I couldn't [F#]see it then but I can see it [D#m]now
+There was [C#]Jesus   [G#]      
+ 
+Chorus 1:
+In the [A#m]waiting, in the searching
+In the [F#]healing and the hurting
+Like a b[C#]lessing buried in the broken p[G#]ieces
+Every [A#m]minute every moment
+Where I've [F#]been and where I'm going
+Even [C#]when I didn't know it or couldn't see i[G#]t     
+[G#]There was J[C#]esus
+ 
+Verse 3:
+For this [C#]man who needs amazing kind of [C#]grace
+For for[C#]giveness at a price I couldn't [C#]pay
+I'm not [F#]perfect so I thank God every [D#m]day    
+There was [C#]Jesus (There was J[G#]esus) 
+
+Bridge:
+On the mountain, in the [F#]valleys (There was J[C#]esus)
+In the shadows of the [C#]alleys ([G#]There was J[A#m]esus)
+In the fire, in the [F#]flood (There was J[C#]esus)
+Always is and always [C#]was  [A#m]      [F#]  
+No I never walk alone ([C#]Never walk alone)
+You are always [G#]there
+
+
+Chorus 2:
+In the [A#m]waiting, in the searching
+In the [F#]healing and the hurting
+Like a b[C#]lessing buried in the broken p[G#]ieces
+Every [A#m]minute every moment
+Where I've [F#]been and where I'm going
+Even [C#]when I didn't know it or couldn't see i[G#]t     
+[G#]There was J[C#]esus  
+T[G#]here was J[C#]esus
+T[G#]here was Jes[C#]us
+There was Jesus
+`
+
+</Script>
+<style>
+  
+  h2 {
+    margin: 0;
+    font-size: 21pt;
+  }
+  #navigation {
+    display: none;
+  }
+  #key, #tempo {
+    padding:0.15em;
+  }
+  .metadata {
+    float: right;
+    text-align:right;
+  }
+  @media print {
+  * { margin: 0 !important; padding: 0 !important; }
+  #controls, .footer, .footerarea{ display: none; }
+  html, body {
+    /*changing width to 100% causes huge overflow and wrap*/
+    /* height:90%;  */
+    /* overflow: hidden; */
+    /* background: #FFF;  */
+    /* font-size: 9.5pt; */
+  }
+
+  .page { width: auto; left:0; top:0; }
+  img { width:100%; }
+  li { margin: 0 0 10px 20px !important;}
+}       
+            
+body {
+font-size: 14pt !important;
+font-family: Helvetica, Arial, sans-serif !important;
+}
+.page {
+font-family:Helvetica, Arial, sans-serif; 
+font-size:15pt; 
+border:solid 0px #666 !important;
+width: 8.5in !important;
+height: 11.0in !important;
+padding: 0.25in !important;
+margin: 0.025in !important;
+column-count: 2 !important;
+column-gap: 5px !important;
+column-fill: balance !important;
+column-rule: 1px solid black !important;
+}
+
+table { border: none; border-collapse: collapse; }
+table td { border-left: 1px solid #000; }
+table td:first-child { border-left: none; }
+
+@page { 
+  font-family:Helvetica, Arial, sans-serif; 
+font-size:15pt; 
+border:solid 0px #666 !important;
+width: 8.5in !important;
+height: 11.0in !important;
+padding: 0.25in !important;
+margin: 0.025in !important;
+column-count: 2 !important;
+column-gap: 5px !important;
+column-fill: balance !important;
+column-rule: 1px solid black !important;
+};
+body { margin: 0; };
+
+.title {
+margin: 0 !important;
+font-size: 21pt !important;
+}
+
+h3 {
+font-size:12pt !important;
+margin: 1pt;
+padding-top:.15em !important;
+margin-bottom:.5em !important;
+/* background-color: lightgray !important; */
+border:solid 1px black !important;
+-webkit-print-color-adjust:exact;
+print-color-adjust:exact;
+padding-bottom:.1em !important;
+}
+
+.chorus {
+margin: 1pt;
+padding-top:.15em !important;
+margin-bottom:.5em !important;
+background-color: lightgray !important;
+-webkit-print-color-adjust:exact;
+print-color-adjust:exact;
+padding-bottom:.1em !important;
+}
+
+p {
+margin:0 !important;
+margin-left:0px !important;
+line-height: 1 !important;
+padding-top:.8em !important;
+padding-bottom:.0em !important;
+}
+
+.chord {
+margin-top: -.9em !important;
+padding:0.015em !important;
+padding-right:.3em !important;
+position: absolute !important;
+font-size:17pt !important;
+line-height:17pt !important;
+font-weight: bold !important;
+z-index:-10 !important;
+}
+
+.nn {
+  font-size:12pt !important;
+  vertical-align: text-top;
+}
+
+p span {
+white-space:pre !important;
+word-wrap: normal !important;
+position: relative !important;
+}
+p.dupe span{
+display:inline;
+font-size:0pt !important;
+}
+p.dupe span.chord{
+display:inline;
+position: relative !important;
+font-size:17pt !important;
+}
+p.dupe {
+display:inline;
+}
+
+p.chordline{
+padding-top:.75em !important;
+}
+
+p.chordline span.chord{
+display:inline;
+position: relative !important;
+font-size:17pt !important;
+}
+
+.nochords {
+font-size: 10pt !important;
+font-family: Helvetica, Arial, sans-serif !important;
+line-height: 1 !important;
+padding-top:.75em !important;
+}
+/* p:last-child {
+  display: none;
+} */
+#end {
+  display: inline;
+}
+
+</style>
+<Script>
+
+// https://github.com/nolanlawson/chord-magic
+chordRoots = [
+    'A',
+    'Bb',
+    'B',
+    'C',
+    'Db',
+    'D',
+    'Eb',
+    'E',
+    'F',
+    'Gb',
+    'G',
+    'Ab'
+  ]
+  
+  const Keys = {
+    'Ab': ['Ab','Bbm','Cm','Db','Eb','Fm','Gdim'],
+    'A': ['A','Bm','C#m','D','E','F#m','G#dim'],
+    'Bb': ['Bb','Cm','Dm','Eb','F','Gm','Adim'],
+    'B': ['B','C#m','D#m','E','F#','G#m','A#dim'],
+    'Cb': ['Cb','Dbm','Ebm','Fb','Gb','Abm','Bbdim'],
+    'C': ['C','Dm','Em','F','G','Am','Bdim'],
+    'C#': ['C#','D#m','E#m','F#','G#','A#m','B#dim'],
+    'Db': ['Db','Ebm','Fm','Gb','Ab','Bbm','Cdim'],
+    'D': ['D','Em','F#m','G','A','Bm','C#dim'],
+    'Eb': ['Eb','Fm','Gm','Ab','Bb','Cm','Ddim'],
+    'E': ['E','F#m','G#m','A','B','C#m','D#dim'],
+    'F': ['F','Gm','Am','Bb','C','Dm','Edim'],
+    'F#': ['F#','G#m','A#m','B','C#','D#m','E#dim'],
+    'Gb': ['Gb','Abm','Bbm','Cb','Db','Ebm','Fdim'],
+    'G': ['G','Am','Bm','C','D','Em','F#dim'],
+    'Fm': ['Fm','Gdim','Ab','Bbm','Cm','Db','Eb'],
+    'F#m': ['F#m','G#dim','A','Bm','C#m','D','E'],
+    'Gm': ['Gm','Adim','Bb','Cm','Dm','Eb','F'],
+    'G#m': ['G#m','A#dim','B','C#m','D#m','E','F#'],
+    'Abm': ['Abm','Bbdim','Cb','Dbm','Ebm','Fb','Gb'],
+    'Am': ['Am','Bdim','C','Dm','Em','F','G'],
+    'A#m': ['A#m','B#dim','C#','D#m','E#m','F#','G#'],
+    'Bm': ['Bm','Cdim','Db','Ebm','Fm','Gb','Ab'],
+    'B#m': ['B#m','C#dim','D','Em','F#m','G','A'],
+    'Cm': ['Cm','Ddim','Eb','Fm','Gm','Ab','Bb'],
+    'C#m': ['C#m','D#dim','E','F#m','G#m','A','B'],
+    'Dm': ['Dm','Edim','F','Gm','Am','Bb','C'],
+    'D#m': ['D#m','E#dim','F#','G#m','A#m','B','C#'],
+    'Ebm': ['Ebm','Fdim','Gb','Abm','Bbm','Cb','Db'],
+    'Em': ['Em','F#dim','G','Am','Bm','C','D']
+    }
+
+  const English = {
+    A: ['A'],
+    Bb: ['Bb', 'A#', 'Asharp', 'Bflat'],
+    B: ['B'],
+    C: ['C'],
+    Db: ['Db', 'C#', 'Dflat', 'Csharp'],
+    D: ['D'],
+    Eb: ['Eb', 'D#', 'Eflat', 'Dsharp'],
+    E: ['E'],
+    F: ['F'],
+    Gb: ['Gb', 'F#', 'Gflat', 'Fsharp'],
+    G: ['G'],
+    Ab: ['Ab', 'G#', 'Aflat', 'Gsharp']
+  }
+  
+  const NorthernEuropean = {
+    A: ['A'],
+    Bb: ['B', 'A#', 'Asharp'],
+    B: ['H'],
+    C: ['C'],
+    Db: ['Db', 'C#', 'Dflat', 'Csharp'],
+    D: ['D'],
+    Eb: ['Eb', 'D#', 'Eflat', 'Dsharp'],
+    E: ['E'],
+    F: ['F'],
+    Gb: ['Gb', 'F#', 'Gflat', 'Fsharp'],
+    G: ['G'],
+    Ab: ['Ab', 'G#', 'Aflat', 'Gsharp']
+  }
+  
+  const SouthernEuropean = {
+    A: ['La'],
+    Bb: ['Tib', 'La#'],
+    B: ['Ti'],
+    C: ['Do'],
+    Db: ['Reb', 'Réb', 'Do#'],
+    D: ['Re', 'Ré'],
+    Eb: ['Mib', 'Re#'],
+    E: ['Mi'],
+    F: ['Fa'],
+    Gb: ['Solb', 'Sob', 'Fa#'],
+    G: ['Sol', 'So'],
+    Ab: ['Lab', 'So#', 'Sol#']
+  }
+  
+  const noteNamings = {
+    English,
+    NorthernEuropean,
+    SouthernEuropean
+  }
+  
+  const chordAddeds = {
+    Add9: ['add9', '2'],
+    Add11: ['add11', '4'],
+    Major6: ['6', 'maj6', 'major6', 'M6'],
+    SixNine: ['6/9'],
+    PowerChord: ['5'] // duh duh DUH, duh duh DUH-duh, duh duh DUH, duh duh ((c) Deep Purple)
+  }
+  
+  const chordExtendeds = {
+    // sevenths
+    Major7: ['Major', ['maj7', 'Maj7', 'M7', '+7']],
+    Minor7: ['Minor', ['m7', 'Min7', 'min7', 'minor7', '-7']],
+    Dominant7: ['Major', ['7', 'dom7', 'dominant7']],
+    Diminished7: ['Diminished', ['dim7', 'diminished7']],
+  
+    // true extended
+    Major9: ['Major', ['maj9', 'M9', '9']],
+    Major11: ['Major', ['maj11', 'M11', '11']],
+    Major13: ['Major', ['maj13', 'M13', '13']],
+  
+    // weird ones
+    AugmentedDominant7: ['Major', ['7#5', '7(#5]']],
+    AugmentedMajor7: ['Major', ['maj7#5', 'maj7(#5]']],
+  
+    // TODO: I don't know what this one is - can't find it on wikipedia
+    Minor9: ['Minor', ['min9', 'm9', 'minor9']]
+  }
+  
+  const chordQualities = {
+    Major: ['', 'major', 'maj', 'M'],
+    Minor: ['m', 'minor', 'min'],
+    Augmented: ['aug', 'augmented', '+'],
+    Diminished: ['dim', 'diminished']
+  }
+  
+  const chordSuspendeds = {
+    Sus4: ['sus4', 'suspended', 'sus'],
+    Sus2: ['sus2', 'suspended2']
+  }
+  
+  function transposeNote (note, num) {
+    let idx = chordRoots.indexOf(note)
+  
+    if (idx === -1) {
+      throw new Error('unknown note: ' + note)
+    }
+  
+    idx += num
+  
+    if (idx > 0) {
+      idx = idx % chordRoots.length
+    } else {
+      idx = (chordRoots.length + idx) % chordRoots.length
+    }
+  
+    return chordRoots[idx]
+  }
+  
+  function transpose (chord, num) {
+    if (typeof num !== 'number') {
+      throw new Error('you need to provide a number')
+    }
+  
+    let transposedChord = JSON.parse(JSON.stringify(chord))
+  
+    transposedChord.root = transposeNote(chord.root, num)
+  
+    if (chord.overridingRoot) {
+      transposedChord.overridingRoot = transposeNote(chord.overridingRoot, num)
+    }
+  
+    return transposedChord
+  }
+  
+  function initializeChordRegexes () {
+    let map = {}
+  
+    Object.keys(noteNamings).forEach(function (noteNaming) {
+      map[noteNaming] = initializeChordRegex(noteNamings[noteNaming])
+    })
+    return map
+  }
+  
+  function initializeChordRegex (noteNaming) {
+    let chordRegex = {}
+  
+    let regexString = createRegexString(noteNaming)
+    let regexStringWithParens = createRegexStringWithParens(regexString)
+  
+    chordRegex.regexString = regexString
+    chordRegex.regexStringWithParens = regexStringWithParens
+    chordRegex.pattern = new RegExp(regexString)
+    chordRegex.patternWithParens = new RegExp(regexStringWithParens)
+  
+    return chordRegex
+  }
+  
+  function optional (pattern) {
+    return '(' + pattern + '?)'
+  }
+  
+  function concatenateAllValues (map) {
+    let res = []
+    Object.keys(map).forEach(function (key) {
+      res = res.concat(map[key])
+    })
+    return res
+  }
+  
+  // extendeds are different; their values are an array of
+  // [type, names]
+  function concatenateAllValuesForExtendeds (map) {
+    let res = []
+    Object.keys(map).forEach(function (key) {
+      res = res.concat(map[key][1])
+    })
+    return res
+  }
+  
+  function createRegexString (noteNaming) {
+    return greedyDisjunction(concatenateAllValues(noteNaming), true) + // root note
+      optional(greedyDisjunction(
+        concatenateAllValues(chordQualities).concat(
+          concatenateAllValuesForExtendeds(chordExtendeds)))) + // quality OR seventh
+      optional(greedyDisjunction(concatenateAllValues(chordAddeds))) + // add
+      optional(greedyDisjunction(concatenateAllValues(chordSuspendeds))) + // sus
+  
+      // overridden root note ("over")
+      optional('(?:/' + greedyDisjunction(concatenateAllValues(noteNaming)) +
+        ')')
+  }
+  
+  function createRegexStringWithParens (regexString) {
+    return '[\\(\\[]' + regexString + '[\\)\\]]'
+  }
+  
+  function quote (str) {
+    // stolen from http://stackoverflow.com/a/3614500/680742
+    let regexpSpecialChars = /([[\]^$|()\\+*?{}=!])/gi
+  
+    return str.replace(regexpSpecialChars, '\\$1')
+  }
+  
+  function greedyDisjunction (aliases, matchingGroup) {
+    aliases = aliases.slice() // copy
+  
+    // sort by longest string first
+    aliases.sort(function (a, b) {
+      let lenCompare = b.length - a.length
+      if (lenCompare !== 0) {
+        return lenCompare < 0 ? -1 : 1
+      }
+      // else sort by normal string comparison
+      return a < b ? -1 : 1
+    })
+  
+    let res = '('
+  
+    if (!matchingGroup) {
+      res += '?:' //  non-matching group
+    }
+  
+    aliases.forEach(function (alias, i) {
+      if (!alias) {
+        return // e.g. the "major" quality can be expressed as an empty string, so skip in the regex
+      }
+      if (i > 0) {
+        res += '|'
+      }
+      res += quote(alias)
+    })
+  
+    return res + ')'
+  }
+  
+  const chordRegexes = initializeChordRegexes()
+  
+  function parseObject (match, noteNaming) {
+    // match objects is 6 elements:
+    // full string, root, quality or extended, added, suspended, overriding root
+    // e.g. ["Cmaj7", "C", "maj7", "", "", ""]
+  
+    let res = {}
+  
+    res.root = rootLookups[noteNaming][match[1]]
+  
+    let foundExtended = chordExtendedsLookups[match[2]]
+    if (foundExtended) {
+      res.quality = foundExtended.quality
+      res.extended = foundExtended.extended
+    } else { // normal quality without extended
+      res.quality = chordQualitiesLookups[match[2]]
+    }
+  
+    if (match[3]) {
+      res.added = chordAddedsLookups[match[3]]
+    }
+  
+    if (match[4]) {
+      res.suspended = chordSuspendedsLookups[match[4]]
+    }
+  
+    if (match[5]) {
+      // substring(1) to cut off the slash, because it's e.g. "/F"
+      res.overridingRoot = rootLookups[noteNaming][match[5].substring(1)]
+    }
+  
+    return res
+  }
+  
+  function parse (str, opts) {
+    opts = opts || {}
+    let noteNaming = opts.naming || 'English'
+  
+    let match = str.match(chordRegexes[noteNaming].pattern)
+  
+    return match && parseObject(match, noteNaming)
+  }
+  
+  const rootLookups = {}
+  
+  Object.keys(noteNamings).forEach(function (noteNaming) {
+    rootLookups[noteNaming] = {}
+    addReverseLookups(rootLookups[noteNaming], noteNamings[noteNaming])
+  })
+  
+  const chordQualitiesLookups = {}
+  
+  addReverseLookups(chordQualitiesLookups, chordQualities)
+  
+  const chordExtendedsLookups = {}
+  
+  addReverseLookupsForExtendeds(chordExtendedsLookups, chordExtendeds)
+  
+  const chordSuspendedsLookups = {}
+  
+  addReverseLookups(chordSuspendedsLookups, chordSuspendeds)
+  
+  const chordAddedsLookups = {}
+  
+  addReverseLookups(chordAddedsLookups, chordAddeds)
+  
+  function addReverseLookups (reverseDict, dict) {
+    Object.keys(dict).forEach(function (key) {
+      let arr = dict[key]
+      arr.forEach(function (element) {
+        reverseDict[element] = key
+      })
+    })
+  }
+  
+  // extendeds are a little different, because they contain both the quality
+  // and the extendeds
+  function addReverseLookupsForExtendeds (reverseDict, dict) {
+    Object.keys(dict).forEach(function (key) {
+      let pair = dict[key]
+      let quality = pair[0]
+      let extendedsArr = pair[1]
+      extendedsArr.forEach(function (element) {
+        reverseDict[element] = {
+          quality: quality,
+          extended: key
+        }
+      })
+    })
+  }
+  
+  
+  function prettyPrint (chord, opts) {
+    opts = opts || {}
+    let naming = opts.naming || 'English'
+  
+    let toPrintableNote
+    // can specify an object here or one of 'English', 'NorthernEuropean', 'SouthernEuropean'
+    if (typeof naming === 'string') {
+      toPrintableNote = note => noteNamings[naming][note][0]
+    } else {
+      let noteNamesAsList = Object.keys(noteNamings.English)
+      toPrintableNote = note => naming[noteNamesAsList.indexOf(note)]
+    }
+  
+    // just use the first name for now, but later we may want to add options
+    // to allow people to choose how to express chord. e.g. to prefer flats
+    // instead of sharps, or prefer certain flats to certain sharps, etc.
+    // (e.g. 'Bb' seems to be more common than 'A#', but 'F#' is more common than 'Ab')
+  
+    let str = toPrintableNote(chord.root)
+    if (chord.extended) {
+      str += chordExtendeds[chord.extended][1][0]
+    } else {
+      str += chordQualities[chord.quality][0]
+    }
+  
+    if (chord.added) {
+      str += chordAddeds[chord.added][0]
+    }
+  
+    if (chord.suspended) {
+      str += chordSuspendeds[chord.suspended][0]
+    }
+  
+    if (chord.overridingRoot) {
+      str += '/' + toPrintableNote(chord.overridingRoot)
+    }
+    return str
+  }
+  
+  var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return typeof sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+  };
+
+  
+$(document).ready(function(){
+    jQuery.expr[':'].icontains = function(a, i, m) {
+            return jQuery(a).text().toUpperCase()
+                .indexOf(m[3].toUpperCase()) >= 0;
+        };
+
+    $.extend($.expr[":"], {
+        "starts-with": function(elem, i, data, set) {
+            var text = $.trim($(elem).text()),
+                term = data[3];
+    
+            // first index is 0
+            return text.indexOf(term) === 0;
+        },
+    
+        "ends-with": function(elem, i, data, set) {
+            var text = $.trim($(elem).text()),
+                term = data[3];
+    
+            // last index is last possible
+            return text.lastIndexOf(term) === text.length - term.length;
+        }
+    });
+
+    // file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file=https://raw.githubusercontent.com/twayneprice/ChordSheets/main/onSong/Oceans.onsong
+
+    if (getUrlParameter('file').length > 0 ) {
+      $.ajax({
+              url: getUrlParameter('file'),
+              type: 'get',
+              async: false,
+              success: function(data) {
+                onSong=data
+              }
+      });
+    }
+
+    onSong = onSong.trim()
+    // console.log(onSong)
+    
+    var song = parseOnSong(onSong);
+
+
+    $('.title').text(song['title'])
+    $('#artist').text(song['artist'])
+    $('#duration').text(song['duration'])
+    $('#originalKey').text(song['originalKey'])
+    $('#piano').text(song['piano'])
+    $('#capo').text(song['capo'])
+    $('#youtube').text(song['youtube'])
+    $('#flow').text(song['flow'])
+    $('#datetime').text((new Date()).toDateString())
+
+    song['notes'].forEach((note) => {
+      $('#notes').append('<p class="nochords"><span style="font-style:italic">'+note+'</span></p>')
+    });
+
+    if ('flow' in song) {
+      song['flow'].split(' ').forEach((item) => {
+        song['sections'].forEach((section) => {
+          if (section['dupe']) {return};
+          if (section['shortNames'].includes(item)||(section['name'].startsWith(item)&&!section['name'].includes(' '))) {
+          // if (section['shortNames'].includes(item)) {
+            $('#sections').append('      <h3><span>'+section['name']+':</span></h3>')
+            section['lines'].forEach((line) => {
+              if (line.replace(/\[(.+?)\]/g, "").trim() == '') {
+                chordline = ' class="chordline"'
+              } else {
+                chordline = ''
+              }
+              // console.log(line)
+              // lineText = '      <p'+chordline+'><span>'+line.replaceAll('[','<span class="chord"><span class="nn">1</span>').replaceAll(']','</span>')+'</span></p>'
+              lineText = '      <p'+chordline+'><span>'+line.replaceAll('[','<span class="chord">').replaceAll(']','</span>')+'</span></p>'
+              currTranspose = parseInt($('#transpose').text())*(-1)
+              // console.log(currTranspose)
+              // console.log(transposeNote('D',currTranspose))
+              for (var i = 0; i < Keys[song['key']].length; i++) { 
+                // lineText = lineText.replaceAll('<span class="chord">'+Keys[song['key']][i],'<span class="chord"><span class="nn">'+(i+1)+'</span>'+Keys[song['key']][i])
+              // console.log(Keys['D'][i]); 
+              }
+
+
+              // console.log(lineText)
+              $('#sections').append(lineText)
+              // $('#sections').append('      <p'+chordline+'><span>'+line.replaceAll('[','<span class="chord">').replaceAll(']','</span>')+'</span></p>')
+            });
+            // $('#sections').append('<p class="nochords"><span></span></p>')
+          }
+        })
+      })
+
+    } else {
+      song['sections'].forEach((section) => {
+        $('#sections').append('<h3><span>'+section['name']+':</span></h3>')
+        section['lines'].forEach((line) => {
+          $('#sections').append('<p><span>'+line.replaceAll('[','<span class="chord">').replaceAll(']','</span>')+'</span></h3>')
+        })
+        $('#sections').append('<p class="nochords"><span></span></p>')
+      });
+
+  }
+
+
+    $('.metadata')
+        .append('<div id="key">Key of '+song['key']+'</div>')
+        .append('<div id="tempo">'+song['tempo']+' BPM in '+song['time']+'</div>')
+        
+
+        .append('<input type="checkbox" id="condensed" name="condensed" value="condensed">')
+        .append('<label for="condensed">Condensed</label>')
+        .append('<br>')
+        .append('<input type="checkbox" id="showChords" name="showChords" value="showChords">')
+        .append('<label for="showChords">Chords</label>')
+        .append('<input type="checkbox" id="showKeyChart" name="showKeyChart" value="showKeyChart">')
+        .append('<label for="showKeyChart">Key Chart</label>')
+        .append('<br>')
+        .append('<input type="checkbox" id="nashville" name="nashville" value="nashville">')
+        .append('<label for="nashville">NN   </label>')
+        .append('<label for="transpose">Tran: </label>')
+        .append('<button type="button" id="transposeDown" name="transposeDown">D</button>')
+        .append('<label id="transpose" name="transpose">0</label>')
+        .append('<button type="button" id="transposeUp">U</button>')
+        .append('<br>')
+        .append('<label>Font: </label>')
+        .append('<button type="button" id="fontsizeDown">D</button>')
+        .append('<button type="button" id="fontsizeUp">U</button>');
+
+    $('#condensed').prop("checked", false)
+    $('#condensed').change();
+
+    $('#showKeyChart').prop("checked", false)
+    $('#showKeyChart').change();
+
+    $('#showChords').prop("checked", true)
+    $('#showChords').change();
+
+
+    $('h3').each(function( index ) {
+        $("span:icontains('chorus')").addClass("chorus");
+    });
+
+    $('.chord').each(function () {
+		$(this).data('origChord',$(this).text());
+	});
+
+    $("span:icontains('http')").each(function () {
+		var label = $(this).text().split('http')[0];
+		var url = 'http' + $(this).text().split('http')[1];
+		$(this).text('')
+		$(this).append('<a href="'+url+'">'+label+'</a>')
+	});
+
+  if (getUrlParameter('condensed') == 'true') {
+    $('#condensed').prop("checked", true)
+    $('#condensed').change();
+  }
+
+  if (getUrlParameter('showChords') == 'true') {
+    $('#showChords').prop("checked", true)
+    $('#showChords').change();
+  }
+
+  if (getUrlParameter('showChordChart') == 'true') {
+    $('#showChordChart').prop("checked", true)
+    $('#showChordChart').change();
+  }
+
+  if (getUrlParameter('nashville') == 'true') {
+    $('#nashville').prop("checked", true)
+    $('#nashville').change();
+  }
+
+  if (getUrlParameter('transpose')) {
+    $('#transpose').text(getUrlParameter('transpose'))
+    $('#transpose').change();
+  }
+
+  if (getUrlParameter('fontAdjust')) {
+    var fontSize = parseInt($("div.page").css("font-size"));
+    // var fontSize = parseInt($("div.page").css("font-size")+ parseInt(getUrlParameter('fontAdjust')));
+    console.log(getUrlParameter('fontAdjust'))
+    console.log(fontSize)
+    fontSize = (fontSize + parseInt(getUrlParameter('fontAdjust'))) + "px";
+    console.log(fontSize)
+    $("div.page").css({'cssText':'font-size:'+fontSize+' !important'});
+
+  }
+
+  $('#nashville').prop("checked", true)
+    $('#nashville').change();
+
+console.log($('p:last').offset());
+console.log($('#end').offset());
+var count = 0;
+  while ($('#end').offset().left > 500) {
+    $('#fontsizeDown').trigger('click');
+    // $(document).change()
+    count++
+    console.log(count);
+    if(count>6){break};
+  } 
+console.log($('p:last').offset());
+  // $('#fontsizeDown').trigger('click');
+  // $('#fontsizeDown').trigger('click');
+  // $('#fontsizeDown').trigger('click');
+    $(document).change()
+    console.log($('p:last').offset());
+console.log($('#end').offset());
+
+  });
+
+
+$(document).on('change', '#condensed', function() {
+    if (this.checked) {
+            $('h3').each(function( index ) {
+            $("h3:starts-with('"+$( this ).text()+"'):not(:first)").nextUntil("h3").addClass("dupe");
+        });
+    } else {
+        $("p").removeClass("dupe");
+    }
+}); 
+
+$(document).on('change', '#showChords', function() {
+  if (this.checked) {
+    $('.chord').show();
+    $('p:not(.nochords):not(.chordline)').each(function () {
+      this.style.setProperty('padding-top','.75em','important');
+    });
+  } else {
+    $('.chord').hide();
+    $('p:not(.nochords):not(.chordline)').each(function () {
+      this.style.setProperty('padding-top','0','important');
+    });
+  }
+}); 
+
+
+$(document).on('change', '#transpose', function() {
+	var currTranspose = parseInt($('#transpose').text())*(-1)
+
+	$('.chord').each(function () {
+		currChord = $(this).text().replaceAll('.','')
+    origChord = $(this).data('origChord').replaceAll('.','')
+    if (currTranspose == 0) {
+      newChord = origChord
+    } else {
+      newChord = prettyPrint(transpose(parse(origChord), currTranspose))
+    }
+		$(this).text($(this).text().replace(currChord,newChord))
+    $(this).change()
+	});
+}); 
+
+$(document).on('click', '#transposeDown', function() {
+	var currTranspose = parseInt($('#transpose').text())
+	var newTranspose = currTranspose - 1
+	$('#transpose').text(newTranspose)
+  $('#transpose').change();
+
+  $('#nashville').change()
+}); 
+
+$(document).on('click', '#transposeUp', function() {
+	var currTranspose = parseInt($('#transpose').text())
+	var newTranspose = currTranspose + 1
+	$('#transpose').text(newTranspose)
+  $('#transpose').change();
+
+  $('#nashville').change()
+}); 
+
+
+$(document).on('change', '#nashville', function() {
+	var key = $('#key').text().split(' ')[2]
+    if (this.checked) {
+      $('.chord').each(function () {
+        var currChord = $(this).text().replaceAll('.','')
+        origChord = $(this).data('origChord').replaceAll('.','')
+        origChord = origChord.replace(/[0-9]/g, '');
+        origChords = origChord.split('/')
+        newChord = (Keys[key]).indexOf(origChords[0])+1;
+        if (origChords.length > 1){
+          newChord = newChord + '/' + ((Keys[key]).indexOf(origChords[1])+1);
+        }
+        // console.log(origChords,newChord);
+
+        if (newChord == 0) {
+          newChord = ''
+        }
+        $(this).prepend('<span class="nn">'+newChord+'</span></span>')
+        $(this).change()
+      });
+    } else {
+  		$('#transpose').change()
+	}
+});
+
+$(document).on('change', '#showKeyChart', function() {
+  if (this.checked) {
+		$('#keyChart').show();
+  } else {
+		$('#keyChart').hide();
+  }
+  $('#keyChart').change();
+});
+
+$(document).on('click', '#fontsizeUp', function() {
+  var fontSize = parseInt($("div.page").css("font-size"));
+  fontSize = fontSize + 1 + "px";
+  $("div.page").css({'cssText':'font-size:'+fontSize+' !important'});
+}); 
+
+$(document).on('click', '#fontsizeDown', function() {
+  var fontSize = parseInt($("div.page").css("font-size"));
+  fontSize = fontSize - 1 + "px";
+  $("div.page").css({'cssText':'font-size:'+fontSize+' !important'});
+}); 
+
+
+function parseOnSong (inSong) {
+  // console.log(inSong)
+  inSongArray = inSong.split(/\r?\n/);
+  var song = {};
+  song['notes'] = [];
+  song["sections"] = [];
+  const regEscape = v => v.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+  metadataTypes = ['title','artist','key','key','capo','tempo','time','duration','flow','originalKey','piano','youtube'];
+  var lastMeta = 0;
+
+  inSongArray.forEach((line,index) => {
+    if (line.includes(':')){
+      if (line.indexOf('/')>=0){return}
+
+      metadataTypes.forEach((entry) => {
+        if (inSong.toUpperCase().includes(entry.toUpperCase()+':')) {
+          song[entry] = inSong.split(new RegExp(regEscape(entry+':'), "ig"))[1].split('\n')[0].trim();
+          thisMeta = inSong.search(new RegExp(regEscape(entry+':'), "ig"));
+          if (thisMeta > lastMeta) {lastMeta = thisMeta};
+        }
+      });
+
+      sectionName = line.split(':')[0]
+      
+      if (metadataTypes.join('|').toUpperCase().indexOf(sectionName.toUpperCase())>= 0){return;}
+      
+      var section = {};
+      section['name'] = sectionName
+      section['shortNames'] = [];
+      section['shortNames'].push(sectionName);
+      nameParts = sectionName.split(' ')
+      first=nameParts[0].substring(0,1)
+
+      if (nameParts.length > 1){
+        last = nameParts[1]
+      } else {
+        last = ''
+      }
+
+      section['shortNames'].push(first+last);
+      section['startingLine'] = index
+
+      if (JSON.stringify(song["sections"]).includes('"name":"'+sectionName+'"')) {
+        section['dupe'] = true
+      }
+
+      song["sections"].push(section)
+    }
+  });
+
+  inSongArray.slice(0,song['sections'][0]['startingLine']-1).forEach((line,index) => {
+    if (line.trim() == '') {return}
+    sectionName = line.split(':')[0]
+    if (metadataTypes.join('|').toUpperCase().indexOf(sectionName.toUpperCase())>= 0){return;}
+    if (line.substring(0,1) == '/') {
+      line = line.substring(1);
+    }
+    song["notes"].push(line)
+  });
+
+  song['sections'].forEach((section,index) => {
+    if( index >= song['sections'].length-1) {
+      var lastLine = inSongArray.length-1
+    } else{
+      var lastLine = song['sections'][index+1]['startingLine']-1
+    }
+    if (inSongArray[lastLine].trim() == ''){lastLine -= 1}
+
+    song['sections'][index]['lines'] = inSongArray.slice(song['sections'][index]['startingLine']+1,lastLine+1)
+  });
+
+  song['sections'].forEach((section,index) => {
+  });
+
+  // $('.nochords').last().remove();
+
+console.log(song)
+  return song
+}
+
+
+</Script>
+</body>
+</html>
+

@@ -13,8 +13,9 @@ def printAll(inUrl):
         print(name)
 
         dir = './prints/orig/'
-        cmd = 'google-chrome --headless --disable-gpu --print-to-pdf="'+dir+name+'.pdf" "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'"'
-        # print(cmd)
+        # cmd = 'google-chrome --headless --disable-gpu --print-to-pdf="'+dir+name+'.pdf" "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'"'
+        cmd = 'google-chrome --headless --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" -window-size=900,1120 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'"'
+        print(cmd)
         os.system(cmd)
 
         res = requests.get(file, headers={'User-Agent':'Mozilla/5.0'})
@@ -26,9 +27,17 @@ def printAll(inUrl):
                 capo = '-Capo-'+capoNum
 
         dir = './prints/capo/'
-        cmd = 'google-chrome --headless --disable-gpu --print-to-pdf="'+dir+name+capo+'.pdf" "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'"'
+        # cmd = 'google-chrome --headless --disable-gpu --print-to-pdf="'+dir+name+capo+'.pdf" "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'"'
+        cmd = 'google-chrome --headless --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" -window-size=900,1120 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'"'
         # print(cmd)
         os.system(cmd)
+
+    cmd = 'convert "./prints/orig/*.png" -page letter ./prints/Songs.pdf'
+    os.system(cmd)
+
+    cmd = 'convert "./prints/capo/*.png" -page letter ./prints/Songs-Capo.pdf'
+    os.system(cmd)
+
 
 def getFileList(inUrl):
     data = {}
