@@ -20,13 +20,16 @@ def printAll(sinceDate):
     for gitFile in files:
         name = gitFile.split('/')[-1].split('.')[0]
         print(name)
-        continue
+
         file = 'https://raw.githubusercontent.com/twayneprice/ChordSheets/main/onSong/'+name+'.onsong'
 
         dir = './prints/orig/'
         cmd = 'google-chrome --headless --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" -window-size=900,1120 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'"'
         os.system(cmd)
 
+        cmd = 'convert -pointsize 10 -draw "text 35,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "./prints/orig/'+name+'.png"  "./prints/orig/'+name+'.png"'
+        os.system(cmd)
+ 
         res = requests.get(file, headers={'User-Agent':'Mozilla/5.0'})
         onsong = res.text.replace('\x00','')
 
@@ -38,6 +41,9 @@ def printAll(sinceDate):
 
         dir = './prints/capo/'
         cmd = 'google-chrome --headless --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" -window-size=900,1120 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'"'
+        os.system(cmd)
+
+        cmd = 'convert -pointsize 10 -draw "text 35,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "./prints/capo/'+name+'.png"  "./prints/capo/'+name+'.png"'
         os.system(cmd)
 
     cmd = 'convert "./prints/orig/*.png" -page letter ./prints/Songs.pdf'

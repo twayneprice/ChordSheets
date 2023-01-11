@@ -1,10 +1,12 @@
-# git add -A
-# git commit -m "new songs"
-# git push
-# sleep 30
+git add -A
+git commit -m "new songs"
+git push
+sleep 30
 
-# python3 printAll.py
+python3 printAll.py
 
-# git add -A
-# git commit -m "new songs"
-# git push
+./printNextSunday.sh
+
+git add -A
+git commit -m "new songs"
+git push
