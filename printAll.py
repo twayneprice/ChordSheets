@@ -47,10 +47,10 @@ def printAll(sinceDate):
         cmd = 'convert -pointsize 10 -draw "text 35,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "./prints/capo/'+name+'.png"  "./prints/capo/'+name+'.png"'
         os.system(cmd)
 
-    cmd = 'convert "./prints/orig/*.png" -page letter ./prints/Songs.pdf'
+    cmd = 'convert "./prints/orig/*.png" -page letter ./Songs.pdf'
     os.system(cmd)
 
-    cmd = 'convert "./prints/capo/*.png" -page letter ./prints/Songs-Capo.pdf'
+    cmd = 'convert "./prints/capo/*.png" -page letter ./Songs-Capo.pdf'
     os.system(cmd)
 
 
