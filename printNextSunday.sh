@@ -1,6 +1,6 @@
 file1="Raise A Hallelujah"
 file2="Why Me Lord"
-file3="Forever"
+file3="Forever*We Sing*"
 file4="*000 Reasons"
 
 convert -pointsize 20 -draw "text 400,20 '$(date -dnext-sunday +%m-%d-%Y)  Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" -page letter ./$(date -dnext-sunday +%m-%d-%Y).pdf
