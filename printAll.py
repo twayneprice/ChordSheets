@@ -34,6 +34,7 @@ def printAll(sinceDate):
         onsong = res.text.replace('\x00','')
 
         capo = ''
+        capoNum = '0'
         if 'Capo:' in onsong:
             capoNum = onsong.split('Capo:')[-1].split('\n')[0].strip()
             if capoNum != '0':
