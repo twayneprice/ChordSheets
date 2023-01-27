@@ -63,18 +63,16 @@ def printAll(sinceDate):
         cmd = 'convert -pointsize 10 -draw "text 35,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" -trim "'+dir+name+'.png" >/dev/null 2>&1'
         os.system(cmd)
 
-    cmd = 'convert -page letter+0-10 "./prints/orig/*.png" -resize 95% -gravity North -format pdf ./Songs.pdf >/dev/null 2>&1'
+    cmd = 'convert -page letter+0-10 "./prints/orig/*.png" -resize 600x800 -gravity North -format pdf ./Songs.pdf >/dev/null 2>&1'
     os.system(cmd)
 
-    cmd = 'convert -page 828x612+0-10 "./prints/condensed/orig/*.png" -resize 95% -gravity North -format pdf ./Songs-Condensed.pdf >/dev/null 2>&1'
+    cmd = 'convert -page letter+0-10 "./prints/capo/*.png" -resize 600x800 -gravity North -format pdf ./Songs-Capo.pdf >/dev/null 2>&1'
     os.system(cmd)
 
-    cmd = 'convert "./prints/capo/*.png" -page letter ./Songs-Capo.pdf >/dev/null 2>&1'
+    cmd = 'convert -page 828x612+0-10 "./prints/condensed/orig/*.png" -resize 800x600 -gravity North -format pdf ./Songs-Condensed.pdf >/dev/null 2>&1'
     os.system(cmd)
 
-    cmd = 'convert  -page 864x576 "./prints/condensed/capo/*.png" -gravity North -resize 864x576 -format pdf ./Songs-Capo-Condensed.pdf >/dev/null 2>&1'
-
-    cmd = 'convert -page 828x612+0-10 "./prints/condensed/capo/*.png" -resize 95% -gravity North -format pdf ./Songs-Capo-Condensed.pdf >/dev/null 2>&1'
+    cmd = 'convert -page 828x612+0-10 "./prints/condensed/capo/*.png" -resize 800x600 -gravity North -format pdf ./Songs-Capo-Condensed.pdf >/dev/null 2>&1'
     os.system(cmd)
 
 
