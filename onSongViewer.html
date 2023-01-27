@@ -129,7 +129,6 @@ Chorus 3:
 [Am]Jesus, I sing for,
 [G]All that You've done for me[C]       [F]       [C]       [F]
 [Melody]
-
 `
 
 onSong1 = `
@@ -326,11 +325,18 @@ p.dupe span{
 display:inline;
 font-size:0pt !important;
 }
+
 p.dupe span.chord{
 display:inline;
 position: relative !important;
 font-size:17pt !important;
 }
+
+p.dupe span.nn{
+  font-size:12pt !important;
+  vertical-align: text-top;
+}
+
 p.dupe {
 display:inline;
 }
@@ -525,14 +531,13 @@ chordRoots = [
     }
   
     let transposedChord = JSON.parse(JSON.stringify(chord))
-  
     transposedChord.root = transposeNote(chord.root, num)
-  
+
     if (chord.overridingRoot) {
       transposedChord.overridingRoot = transposeNote(chord.overridingRoot, num)
     }
-  
-    return transposedChord
+
+      return transposedChord
   }
   
   function initializeChordRegexes () {
@@ -823,8 +828,6 @@ $(document).ready(function(){
     }
 
     onSong = onSong.trim()
-    // console.log(onSong)
-    
     var song = parseOnSong(onSong);
 
 
@@ -964,11 +967,7 @@ $(document).ready(function(){
 
   if (getUrlParameter('fontAdjust')) {
     var fontSize = parseInt($("div.page").css("font-size"));
-    // var fontSize = parseInt($("div.page").css("font-size")+ parseInt(getUrlParameter('fontAdjust')));
-    console.log(getUrlParameter('fontAdjust'))
-    console.log(fontSize)
     fontSize = (fontSize + parseInt(getUrlParameter('fontAdjust'))) + "px";
-    console.log(fontSize)
     $("div.page").css({'cssText':'font-size:'+fontSize+' !important'});
 
   }
@@ -981,15 +980,11 @@ console.log($('#end').offset());
 var count = 0;
   while ($('#end').offset().left > 500) {
     $('#fontsizeDown').trigger('click');
-    // $(document).change()
     count++
     console.log(count);
     if(count>6){break};
   } 
 console.log($('p:last').offset());
-  // $('#fontsizeDown').trigger('click');
-  // $('#fontsizeDown').trigger('click');
-  // $('#fontsizeDown').trigger('click');
     $(document).change()
     console.log($('p:last').offset());
 console.log($('#end').offset());
@@ -1000,10 +995,13 @@ console.log($('#end').offset());
 $(document).on('change', '#condensed', function() {
     if (this.checked) {
             $('h3').each(function( index ) {
-            $("h3:starts-with('"+$( this ).text()+"'):not(:first)").nextUntil("h3").addClass("dupe");
+            $("h3:starts-with('"+$( this ).text()+"'):first").nextUntil("h3").addClass("dupe");
+            $("h3:starts-with('"+$( this ).text()+"'):not(:first)").nextUntil("h3").hide();
+            // $("h3:starts-with('"+$( this ).text()+"')").nextUntil("h3").addClass("dupe");
         });
     } else {
-        $("p").removeClass("dupe");
+      $("p").removeClass("dupe");
+      $("p").show();
     }
 }); 
 
@@ -1031,7 +1029,11 @@ $(document).on('change', '#transpose', function() {
     if (currTranspose == 0) {
       newChord = origChord
     } else {
-      newChord = prettyPrint(transpose(parse(origChord), currTranspose))
+      if (origChord in Keys) {
+        newChord = prettyPrint(transpose(parse(origChord), currTranspose))
+      } else {
+        newChord = origChord
+      }
     }
 		$(this).text($(this).text().replace(currChord,newChord))
     $(this).change()
