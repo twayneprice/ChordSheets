@@ -1,7 +1,7 @@
-file1="Raise A Hallelujah"
-file2="Why Me Lord"
-file3="Forever*We Sing*"
-file4="*000 Reasons"
+file1="Nothing But The Blood"
+file2="Well Done"
+file3="Scars"
+file4="I Am Not Alone"
 
 convert -page letter+0-10 -pointsize 15 -draw "text 150,2 '$(date -dnext-sunday +%m-%d-%Y)  Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" -resize 600x800 -gravity North -format pdf ./$(date -dnext-sunday +%m-%d-%Y).pdf
 

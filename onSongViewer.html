@@ -53,82 +53,59 @@
 <Script>
 
 onSong = `
-Title: This Is Amazing Grace
-Artist: Phil Wickham
-Key: C
-Capo: 5
-Tempo: 103
+Title: Forever (We Sing Hallelujah)
+Artist: Kari Jobe
+Key: C#
+Capo: 1
+Tempo: 72
 Time: 4/4
-Duration: 4:45
-Flow: I V1 C1 V2 C2 B1 B2 C3
-Youtube: https://www.youtube.com/watch?v=BXLHITKESpc
-OriginalKey: G
-Piano: 0
-Score: https://musescore.com/user/38235231/scores/942626
-/Melody: 4 323 323 123 56
-/Melody: 4 323 323 123 65
+Duration: 04:01
+Flow: I V1 V2 P C P C B1 B2 C C I
+Youtube: https://www.youtube.com/watch?v=YanlZBTToeM
+OriginalKey: Ab
+Piano: +1
 
-Intro:
-[Melody][C]         [F]         [C]         [F]
+Instrumental:
+[C#]      [G#]      [D#m]      [F#]  
 
 Verse 1:
-[C]Who breaks the power, of [C]sin and darkness
-[F]Whose love is mighty, and [F]so much stronger
-[Am]The King of Glory, [G]the King above all kings [F]
-[C]Who shakes the whole earth, [C]with holy thunder
-[F]Who leaves us breathless, in [F]awe and wonder
-[Am]The King of Glory, [G]the King above all kings [F]
-
-Chorus 1:
-[F]   This is amazing gr[C]ace
-[C]This is unfailing l[F]ove
-[F]That You would take my pl[Am]ace
-[Am]That You would bear my cr[G]oss
-[G]You would lay down Your l[C]ife
-[C]That I would be set fr[F]ee
-[Am]Jesus, I sing for,
-[G]All that You've done for me[C]         [F]        [Melody]
+[C#]The moon and stars they [G#]wept
+The morning sun was [A#m]dead
+The Savior of the [F#]world was fall[C#]en
+His body on the [G#]cross
+His blood poured out for [A#m]us
+The weight of every [F#]curse upon [C#]Him
+      [G#]      [D#m]      [F#]
 
 Verse 2:
-[C]Who brings our chaos, [C]back into order
-[F]Who makes the orphan, a [F]son and daughter
-[Am]The King of Glory, [G]the King of Glory   [F]
-[C]Who rules the nations, [C]with truth and justice
-[F]Shines like the sun in, [F]all of its brilliance
-[Am]The King of Glory, [G]the King above all kings[F]
+[C#]One final breath He [G#]gave
+As heaven looked [A#m]away
+The Son of God was [F#]laid
+in dark[C#]ness
+A battle in the [G#]grave
+The war on death was [A#m]waged
+The power of hell for[F#]ever broken
 
-Chorus 2:
-[F]   This is amazing gr[C]ace
-[C]This is unfailing l[F]ove
-[F]That You would take my pl[Am]ace
-[Am]That You would bear my cr[G]oss
-[G]You would lay down Your l[C]ife
-[C]That I would be set fr[F]ee
-[Am]Jesus, I sing for,
-[G]All that You've done for me[C]
+Pre-Chorus:
+[C#]The ground began to [G#]shake
+The stone was rolled [A#m]away
+His perfect love could [F#]not be overcome
+[C#]Now death where is your [G#]sting
+Our resurrected [A#m]King
+has rendered you de[F#]feated
+
+Chorus:
+For[C#]ever He is [G#]glorified, For[A#m]ever He is [F#]lifted high
+For[C#]ever He is [G#]risen, He is a[A#m]live, He is a[F#]live
 
 Bridge 1:
-[C]Worthy is the Lamb who was [C]slain
-[F]Worthy is the King who conquered[F] the grave
-[C]Worthy is the Lamb who was [C]slain
-[F]Worthy is the King who conquered[F] the grave
+[C#]We sing Halle[G#]lujah We sing Halle[A#m]lujah
+We sing Halle[F#]lujah The Lamb has over[C#]come
 
 Bridge 2:
-[C]Worthy is the Lamb who was [C]slain
-[F]Worthy is the King who conquered[F] the grave
-[Am]Worthy is the Lamb who was slain[G]
-[G]Worthy, [F]Worthy, [F]Worthy
+[C#]We sing Halle[G#]lujah We sing Halle[A#m]lujah
+We sing Halle[F#]lujah, The Lamb has overcome
 
-Chorus 3:
-[F]   This is amazing gr[C]ace
-[C]This is unfailing l[F]ove
-[F]That You would take my pl[Am]ace
-[Am]That You would bear my cr[G]oss
-[G]You would lay down Your l[C]ife
-[C]That I would be set fr[F]ee
-[Am]Jesus, I sing for,
-[G]All that You've done for me[C]       [F]       [C]       [F]
-[Melody]
 `
 
 onSong1 = `
@@ -1022,14 +999,15 @@ $(document).on('change', '#showChords', function() {
 
 $(document).on('change', '#transpose', function() {
 	var currTranspose = parseInt($('#transpose').text())*(-1)
+  var allNotes = Object.values(Keys).flat()
 
-	$('.chord').each(function () {
+  $('.chord').each(function () {
 		currChord = $(this).text().replaceAll('.','')
     origChord = $(this).data('origChord').replaceAll('.','')
     if (currTranspose == 0) {
       newChord = origChord
     } else {
-      if (origChord in Keys) {
+      if (allNotes.includes(origChord)) {
         newChord = prettyPrint(transpose(parse(origChord), currTranspose))
       } else {
         newChord = origChord
