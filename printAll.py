@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 def printAll(sinceDate):
     g = git.Git(".") 
     files = g.log('--since',sinceDate,'--name-status','--oneline','*.onsong')
-
+    print(files)
     files = files.replace('\t','\n')
     files = files.split('\n')
     files = [x for x in files if "onSong/" in x]
@@ -90,4 +90,5 @@ if __name__ == "__main__":
                      ).strftime('%m/%d/%Y')
 
     sinceDate = lastSunday
+    print(sinceDate)
     printAll(sinceDate)
