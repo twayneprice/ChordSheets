@@ -1,5 +1,5 @@
 file1="Glorious Day*"
-file2="I Saw The Light"
+file2="When We All*"
 file3="There Was Jesus"
 file4="Loving My Jesus"
 
