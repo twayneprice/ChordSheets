@@ -1,7 +1,7 @@
-file1="Glorious Day*"
-file2="When We All*"
-file3="There Was Jesus"
-file4="Loving My Jesus"
+file1="Raise A Hallelujah"
+file2="Amazing Grace"
+file3="Loving My Jesus"
+file4="No Longer Slaves"
 
 convert -page letter+0-10 -pointsize 15 -draw "text 150,2 '$(date -dnext-sunday +%m-%d-%Y)  Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" -resize 600x800 -gravity North -format pdf ./$(date -dnext-sunday +%m-%d-%Y).pdf
 
