@@ -26,17 +26,17 @@ def printAll(sinceDate):
 
         # orig
         dir = './prints/orig/'
-        cmd = 'google-chrome --headless -hide-scrollbars --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" -window-size=900,2000 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'"  >/dev/null 2>&1'
+        cmd = 'google-chrome --headless -hide-scrollbars --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" -window-size=900,1200 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'"  >/dev/null 2>&1'
         os.system(cmd)
         cmd = 'convert -pointsize 10 -draw "text 35,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" -trim "'+dir+name+'.png"  >/dev/null 2>&1'
         os.system(cmd)
 
         # orig cond
         dir = './prints/condensed/orig/'
-        cmd = 'google-chrome --headless -hide-scrollbars --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" -window-size=900,2000 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?condensed=true&file='+file+'" >/dev/null 2>&1'
-        os.system(cmd)
+        cmd = 'google-chrome --headless -hide-scrollbars --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" -window-size=900,1200 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?condensed=true&file='+file+'" >/dev/null 2>&1'
+        # os.system(cmd)
         cmd = 'convert -pointsize 10 -draw "text 35,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" -trim "'+dir+name+'.png" -trim "'+dir+name+'.png" >/dev/null 2>&1'
-        os.system(cmd)
+        # os.system(cmd)
 
  
         # Capo
@@ -51,17 +51,17 @@ def printAll(sinceDate):
                 capo = '-Capo-'+capoNum
 
         dir = './prints/capo/'
-        cmd = 'google-chrome --headless -hide-scrollbars --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" -window-size=900,2000 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'" >/dev/null 2>&1'
+        cmd = 'google-chrome --headless -hide-scrollbars --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" --force-device-scale-factor=4.0 --window-size=900,1200 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'" >/dev/null 2>&1'
         os.system(cmd)
-        cmd = 'convert -pointsize 10 -draw "text 35,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" -trim "'+dir+name+'.png" >/dev/null 2>&1'
+        cmd = 'convert -pointsize 40 -draw "text 35,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" -trim "'+dir+name+'.png" >/dev/null 2>&1'
         os.system(cmd)
 
         #capo cond
         dir = './prints/condensed/capo/'
         cmd = 'google-chrome --headless -hide-scrollbars --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" -window-size=900,2000 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?condensed=true&file='+file+'&transpose='+capoNum+'" >/dev/null 2>&1'
-        os.system(cmd)
+        # os.system(cmd)
         cmd = 'convert -pointsize 10 -draw "text 35,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" -trim "'+dir+name+'.png" >/dev/null 2>&1'
-        os.system(cmd)
+        # os.system(cmd)
 
     cmd = 'convert -page letter+0-10 "./prints/orig/*.png" -resize 600x800 -gravity North -format pdf ./Songs.pdf >/dev/null 2>&1'
     os.system(cmd)
@@ -89,6 +89,6 @@ if __name__ == "__main__":
                      -timedelta(days=((datetime.now().isoweekday() + 1) % 7))
                      ).strftime('%m/%d/%Y')
 
-    sinceDate = lastSunday
+    # sinceDate = lastSunday
     print(sinceDate)
     printAll(sinceDate)
