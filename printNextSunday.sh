@@ -9,13 +9,17 @@ file4="Man Of Sorrows"
 # file4="Battle Belongs"
 
 
-google-chrome --headless -hide-scrollbars --disable-gpu --hide-scrollbars --screenshot="./prints/capo/${file1}.png" --force-device-scale-factor=2.0 --window-size=900,1200 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file=https://raw.githubusercontent.com/twayneprice/ChordSheets/main/onSong/${file1}.onsong&transpose=0"
+# google-chrome --headless --disable-gpu --hide-scrollbars --screenshot="./prints/capo/Amazing Grace.png" "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file=https://raw.githubusercontent.com/twayneprice/ChordSheets/main/onSong/Amazing Grace.onsong&transpose=0"
 
 
 
 # convert -page letter+0-10 -pointsize 15 -draw "text 150,2 '$(date -dnext-sunday +%m-%d-%Y)  Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" -resize 600x800 -gravity North -format pdf ./$(date -dnext-sunday +%m-%d-%Y).pdf
 
 # convert -page letter+0-10 -pointsize 15 -draw "text 150,2 '$(date -dnext-sunday +%m-%d-%Y)  Band'" "./prints/capo/${file1}.png" "./prints/capo/${file2}.png" "./prints/capo/${file3}.png" "./prints/capo/${file4}.png" -resize 600x800 -gravity North -format pdf ./$(date -dnext-sunday +%m-%d-%Y)-Capo.pdf
+
+convert -page letter+0-10 -pointsize 15 -draw "text 150,2 '$(date -dnext-sunday +%m-%d-%Y)  Band'" "./prints/capo/${file1}.png" "./prints/capo/${file2}.png" "./prints/capo/${file3}.png" "./prints/capo/${file4}.png" -format pdf ./$(date -dnext-sunday +%m-%d-%Y)-Capo.pdf
+
+
 
 # convert  -rotate 180  "./prints/capo/${file1}.png" -format pdf ./$(date -dnext-sunday +%m-%d-%Y)-Capo.pdf
 # pdftk ./$(date -dnext-sunday +%m-%d-%Y)-Capo.pdf cat 1-endsouth output ./$(date -dnext-sunday +%m-%d-%Y)-Capo2.pdf
