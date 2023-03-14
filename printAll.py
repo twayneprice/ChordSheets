@@ -95,6 +95,6 @@ if __name__ == "__main__":
                      -timedelta(days=((datetime.now().isoweekday() + 1) % 7))
                      ).strftime('%m/%d/%Y')
 
-    # sinceDate = lastSunday
+    sinceDate = lastSunday
     print(sinceDate)
     printAll(sinceDate)
