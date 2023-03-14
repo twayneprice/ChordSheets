@@ -26,10 +26,13 @@ def printAll(sinceDate):
 
         # orig
         dir = './prints/orig/'
-        cmd = 'google-chrome --headless -hide-scrollbars --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" -window-size=900,1200 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'"  >/dev/null 2>&1'
+
+        cmd = 'google-chrome --headless=new --force-device-scale-factor=2.0  --window-size=900,1200 --disable-gpu --screenshot="'+dir+name+'.png"  "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'"'
         os.system(cmd)
-        cmd = 'convert -pointsize 10 -draw "text 35,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" -trim "'+dir+name+'.png"  >/dev/null 2>&1'
-        # os.system(cmd)
+
+        cmd = 'convert -pointsize 20 -draw "text 35,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" "'+dir+name+'.png"'
+        os.system(cmd)
+
 
         # # orig cond
         # dir = './prints/condensed/orig/'
@@ -52,33 +55,25 @@ def printAll(sinceDate):
                 capo = '-Capo-'+capoNum
 
         dir = './prints/capo/'
-        # cmd = 'google-chrome --headless -hide-scrollbars --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" --force-device-scale-factor=2.0 --window-size=2000,2400 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'" >/dev/null 2>&1'
-        # cmd = 'google-chrome --headless --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'" >/dev/null 2>&1'
-        # cmd = 'google-chrome --headless --disable-gpu --print-to-pdf="'+dir+name+capo+'.pdf" "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'"'
-
         cmd = 'google-chrome --headless=new --force-device-scale-factor=2.0  --window-size=900,1200 --disable-gpu --screenshot="'+dir+name+'.png"  "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'"'
-
-        # cmd = 'google-chrome --headless --hide-scrollbars --window-size=900,1200 --disable-gpu --print-to-pdf="'+dir+name+'.pdf" "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'"'
-
-
-        # print(cmd)
         os.system(cmd)
 
         cmd = 'convert -pointsize 20 -draw "text 35,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" "'+dir+name+'.png"'
         os.system(cmd)
 
-        #capo cond
-        dir = './prints/condensed/capo/'
-        cmd = 'google-chrome --headless -hide-scrollbars --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" -window-size=900,2000 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?condensed=true&file='+file+'&transpose='+capoNum+'" >/dev/null 2>&1'
-        # os.system(cmd)
-        cmd = 'convert -pointsize 10 -draw "text 35,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" -trim "'+dir+name+'.png" >/dev/null 2>&1'
-        # os.system(cmd)
+        # #capo cond
+        # dir = './prints/condensed/capo/'
+        # cmd = 'google-chrome --headless -hide-scrollbars --disable-gpu --hide-scrollbars --screenshot="'+dir+name+'.png" -window-size=900,2000 "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?condensed=true&file='+file+'&transpose='+capoNum+'" >/dev/null 2>&1'
+        # # os.system(cmd)
+        # cmd = 'convert -pointsize 10 -draw "text 35,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" -trim "'+dir+name+'.png" >/dev/null 2>&1'
+        # # os.system(cmd)
 
-    # cmd = 'convert -page letter+0-10 "./prints/orig/*.png" -resize 600x800 -gravity North -format pdf ./Songs.pdf >/dev/null 2>&1'
-    # os.system(cmd)
+    cmd = 'convert -page letter+0-10 "./prints/orig/*.png" -format pdf ./Songs.pdf >/dev/null 2>&1'
+    os.system(cmd)
 
     cmd = 'convert -page letter+0-10 "./prints/capo/*.png" -format pdf ./Songs-Capo.pdf >/dev/null 2>&1'
     os.system(cmd)
+
 
     # cmd = 'convert -page 828x612+0-10 "./prints/condensed/orig/*.png" -resize 800x600 -gravity North -format pdf ./Songs-Condensed.pdf >/dev/null 2>&1'
     # os.system(cmd)
