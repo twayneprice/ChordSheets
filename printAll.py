@@ -92,7 +92,7 @@ def getFileList(inUrl):
 if __name__ == "__main__":
     sinceDate = '1/1/2000'
     lastSunday = (datetime.now()
-                     -timedelta(days=((datetime.now().isoweekday() + 1) % 7)-7)
+                     -timedelta(days=((datetime.now().isoweekday() + 1) % 7)+7)
                      ).strftime('%m/%d/%Y')
 
     sinceDate = lastSunday
