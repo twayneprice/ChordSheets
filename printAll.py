@@ -30,7 +30,7 @@ def printAll(sinceDate):
         cmd = 'google-chrome --headless=new --force-device-scale-factor=2.0  --window-size=900,1200 --disable-gpu --screenshot="'+dir+name+'.png"  "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'"'
         os.system(cmd)
 
-        cmd = 'convert -pointsize 20 -draw "text 35,100 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" "'+dir+name+'.png"'
+        cmd = 'convert -pointsize 20 -draw "text 100,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" "'+dir+name+'.png"'
         os.system(cmd)
 
 
@@ -58,7 +58,7 @@ def printAll(sinceDate):
         cmd = 'google-chrome --headless=new --force-device-scale-factor=2.0  --window-size=900,1200 --disable-gpu --screenshot="'+dir+name+'.png"  "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'"'
         os.system(cmd)
 
-        cmd = 'convert -pointsize 20 -draw "text 35,100 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" "'+dir+name+'.png"'
+        cmd = 'convert -pointsize 20 -draw "text 100,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" "'+dir+name+'.png"'
         os.system(cmd)
 
         # #capo cond
