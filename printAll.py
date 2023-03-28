@@ -27,12 +27,11 @@ def printAll(sinceDate):
         # orig
         dir = './prints/orig/'
 
-        cmd = 'google-chrome --headless=new --force-device-scale-factor=2.0  --window-size=900,1200 --disable-gpu --screenshot="'+dir+name+'.png"  "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'"'
-        # os.system(cmd)
-        print(cmd)
+        cmd = 'google-chrome --headless=new --force-device-scale-factor=2.0 --user-data-dir="./ChromeData" --profile-directory="TempProfile" --window-size=900,1200 --disable-gpu --screenshot="'+dir+name+'.png"  "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'"'
+        os.system(cmd)
 
         cmd = 'convert -pointsize 20 -draw "text 100,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" "'+dir+name+'.png"'
-        # os.system(cmd)
+        os.system(cmd)
 
 
         # # orig cond
@@ -56,12 +55,11 @@ def printAll(sinceDate):
                 capo = '-Capo-'+capoNum
 
         dir = './prints/capo/'
-        cmd = 'google-chrome --headless=new --force-device-scale-factor=2.0  --window-size=900,1200 --disable-gpu --screenshot="'+dir+name+'.png"  "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'"'
-        # os.system(cmd)
-        print(cmd)
+        cmd = 'google-chrome --headless=new --force-device-scale-factor=2.0 --user-data-dir="./ChromeData" --profile-directory="TempProfile" --window-size=900,1200 --disable-gpu --screenshot="'+dir+name+'.png"  "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'"'
+        os.system(cmd)
 
         cmd = 'convert -pointsize 20 -draw "text 100,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" "'+dir+name+'.png"'
-        # os.system(cmd)
+        os.system(cmd)
 
         # #capo cond
         # dir = './prints/condensed/capo/'
