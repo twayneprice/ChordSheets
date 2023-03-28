@@ -1,12 +1,12 @@
-file1="Less Like Me"
-file2="*My Chains*"
-file3="Well Done"
-file4="You Say"
+# file1="Less Like Me"
+# file2="*My Chains*"
+# file3="Well Done"
+# file4="You Say"
 
-# file1="*Passion*"
-# file2="The Old Rugged Cross"
-# file3="Man Of Sorrows"
-# file4="King Of Kings"
+file1="This Is Amazing Grace"
+file2="The Old Rugged Cross"
+file3="Man Of Sorrows"
+file4="We Believe"
 
 
 # convert -page letter+0-10 -pointsize 15 -draw "text 150,2 '04-09-2023  Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" -format pdf ./04-09-2023.pdf
