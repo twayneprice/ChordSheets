@@ -1,4 +1,4 @@
-file1="Blessed Redeemer"
+file1="Raise A Hallelujah"
 file2="Nothing But The Blood"
 file3="*Dry Bones*"
 file4="Goodness Of God"
