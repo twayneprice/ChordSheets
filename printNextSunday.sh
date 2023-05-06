@@ -1,7 +1,7 @@
-file1="There Was Jesus"
-file2="He Set Me Free"
-file3="No Longer Slaves"
-file4="Loving My Jesus"
+file1="This Is Amazing Grace"
+file2="*Fly Away"
+file3="There was Jesus"
+file4="Living Hope"
 
 
 # convert -page letter+0-10 -pointsize 15 -draw "text 150,2 '04-09-2023  Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" -format pdf ./04-09-2023.pdf
