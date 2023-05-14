@@ -1,7 +1,7 @@
-file1="This Is Amazing Grace"
-file2="*Fly Away"
-file3="There Was Jesus"
-file4="Living Hope"
+file1="When the Roll*"
+file2="Well Done"
+file3="Scars"
+file4="Mamas"
 
 
 # convert -page letter+0-10 -pointsize 15 -draw "text 150,2 '04-09-2023  Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" -format pdf ./04-09-2023.pdf
