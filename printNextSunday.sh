@@ -1,7 +1,7 @@
-file1="Me On Your Mind"
-file2="When We All Get To Heaven"
-file3="Good Good Father"
-file4="I Am Not Alone"
+file1="Raise A Hallelujah"
+file2="I Saw The Light"
+file3="Holy Water"
+file4="Goodness Of God"
 
 
 # convert -page letter+0-10 -pointsize 15 -draw "text 150,2 '04-09-2023  Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" -format pdf ./04-09-2023.pdf
