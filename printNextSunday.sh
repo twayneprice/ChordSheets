@@ -1,7 +1,7 @@
-file1="*Dry Bones*"
+file1="Holy Water"
 file2="Nothing But The Blood"
-file3="Man Of Sorrows"
-file4="No Longer Slaves"
+file3="Blessed Redeemer"
+file4="Less Like Me"
 
 
 # convert -page letter+0-10 -pointsize 15 -draw "text 150,2 '04-09-2023  Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" -format pdf ./04-09-2023.pdf
