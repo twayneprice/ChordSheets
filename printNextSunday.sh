@@ -1,7 +1,7 @@
 file1="Holy Water"
 file2="Nothing But The Blood"
-file3="Blessed Redeemer"
-file4="Less Like Me"
+file3="Scars"
+file4="Living Hope"
 
 
 # convert -page letter+0-10 -pointsize 15 -draw "text 150,2 '04-09-2023  Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" -format pdf ./04-09-2023.pdf
