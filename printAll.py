@@ -14,7 +14,7 @@ def printAll(sinceDate):
 
     # files = files.replace('\t','\n')
     files = files.split('\n')
-    files = [x[2:] for x in files if "M\tonSong/" in x]
+    files = [x[2:] for x in files if "\tonSong/" in x]
     files = [*set(files)]
     files.sort()
 
