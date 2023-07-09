@@ -27,7 +27,7 @@ def printAll(sinceDate):
         # orig
         dir = './prints/orig/'
 
-        cmd = 'google-chrome --headless=new --force-device-scale-factor=2.0 --user-data-dir="./ChromeData" --profile-directory="TempProfile" --window-size=900,1200 --disable-gpu --screenshot="'+dir+name+'.png"  "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'"'
+        cmd = 'google-chrome --headless=new --force-device-scale-factor=2.0 --user-data-dir="./ChromeData" --profile-directory="TempProfile" --window-size=900,1200 --disable-gpu --screenshot="'+dir+name+'.png"  "https://twayneprice.github.io/ChordSheets/onSongViewer.html?file='+file+'"'
         os.system(cmd)
 
         cmd = 'convert -pointsize 20 -draw "text 100,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" "'+dir+name+'.png"'
@@ -55,7 +55,7 @@ def printAll(sinceDate):
                 capo = '-Capo-'+capoNum
 
         dir = './prints/capo/'
-        cmd = 'google-chrome --headless=new --force-device-scale-factor=2.0 --user-data-dir="./ChromeData" --profile-directory="TempProfile" --window-size=900,1200 --disable-gpu --screenshot="'+dir+name+'.png"  "file:///home/wayne/Downloads/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'"'
+        cmd = 'google-chrome --headless=new --force-device-scale-factor=2.0 --user-data-dir="./ChromeData" --profile-directory="TempProfile" --window-size=900,1200 --disable-gpu --screenshot="'+dir+name+'.png"  "https://twayneprice.github.io/ChordSheets/onSongViewer.html?file='+file+'&transpose='+capoNum+'"'
         os.system(cmd)
 
         cmd = 'convert -pointsize 20 -draw "text 100,30 \'Last Changed: $(date -r "./onSong/'+name+'.onsong" +%m-%d-%Y)\'" "'+dir+name+'.png" "'+dir+name+'.png"'
@@ -92,7 +92,7 @@ def getFileList(inUrl):
 if __name__ == "__main__":
     sinceDate = '1/1/2000'
     lastSunday = (datetime.now()
-                     -timedelta(days=((datetime.now().isoweekday() + 1) % 7)+7)
+                     -timedelta(days=((datetime.now().isoweekday() + 1) % 7)+14)
                      ).strftime('%m/%d/%Y')
 
     sinceDate = lastSunday
