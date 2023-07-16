@@ -1,7 +1,7 @@
-file1="This Is Amazing Grace"
-file2="The Old Rugged Cross"
-file3="Me And God"
-file4="I Am Not Alone"
+file1="Raise A Hallelujah"
+file2="When the Roll*"
+file3="Well Done"
+file4="There Was Jesus"
 
 
 # convert -page letter+0-10 -pointsize 15 -draw "text 150,2 '04-09-2023  Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" -format pdf ./04-09-2023.pdf
