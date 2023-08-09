@@ -1,7 +1,7 @@
-file1="I Saw The Light"
-file2="Why Me Lord"
-file3="Loving My Jesus"
-file4="Me On Your Mind"
+file1="This Is Our God"
+file2="When We All Get To Heaven"
+file3="Good Good Father"
+file4="Glorious Day"
 
 
 # convert -page letter+0-10 -pointsize 15 -draw "text 150,2 '04-09-2023  Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" -format pdf ./04-09-2023.pdf
