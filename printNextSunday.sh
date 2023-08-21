@@ -1,7 +1,7 @@
-file1="Baptism"
-file2="Holy Water"
-file3="Amazing Love"
-file4="My Jesus"
+file1="My Jesus"
+file2="Living Hope"
+file3="No Longer Slaves"
+file4="Goodness Of God"
 
 
 convert -page letter+0-10 -pointsize 15 -draw "text 150,2 'Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" -format pdf ./Sunday.pdf
