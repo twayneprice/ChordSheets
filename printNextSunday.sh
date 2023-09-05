@@ -1,5 +1,5 @@
-file1="My Jesus"
-file2="Less Like Me"
+file1="Less Like Me"
+file2="Loving My Jesus"
 file3="Man Of Sorrows"
 file4="I Am Not Alone"
 
