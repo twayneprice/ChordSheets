@@ -1,7 +1,7 @@
-file1="Less Like Me"
-file2="Loving My Jesus"
-file3="Man Of Sorrows"
-file4="I Am Not Alone"
+file1="This Is Amazing Grace"
+file2="Me On Your Mind"
+file3="*Dry Bones*"
+file4="Well Done"
 
 
 convert -page letter+0-10 -pointsize 15 -draw "text 150,2 'Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" -format pdf ./Sunday.pdf
