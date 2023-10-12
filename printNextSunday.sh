@@ -1,8 +1,8 @@
-file1="Why Me Lord"
-file2="Amazing Grace"
-file3="Even If"
-file4="Eye Of The Storm"
-file5=""
+file1="O Come To The Alter"
+file2="Blessed Be The Name"
+file3="Me And God"
+file4="Goodness Of God"
+file5="Because He Lives"
 
 
 convert -page letter+0-10 -pointsize 15 -draw "text 150,2 'Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" "./prints/orig/${file5}.png" "./prints/orig/${file6}.png" -format pdf ./Sunday.pdf
