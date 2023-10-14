@@ -1,5 +1,5 @@
 file1="O Come To The Alter"
-file2="Blessed Be The Name"
+file2="Blessed Be Your Name"
 file3="Me And God"
 file4="Goodness Of God"
 file5="Because He Lives"
