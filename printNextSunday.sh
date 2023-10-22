@@ -1,8 +1,9 @@
-file1="O Come To The Alter"
-file2="Blessed Be Your Name"
-file3="Me And God"
-file4="Goodness Of God"
-file5="Because He Lives"
+file1="My Jesus"
+file2="Ill Fly Away"
+file3="I Am Not Alone"
+file4="Youre Still God"
+file5=""
+file6=""
 
 
 convert -page letter+0-10 -pointsize 15 -draw "text 150,2 'Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" "./prints/orig/${file5}.png" "./prints/orig/${file6}.png" -format pdf ./Sunday.pdf
