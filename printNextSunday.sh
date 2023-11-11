@@ -1,7 +1,7 @@
-file1="Homecoming"
-file2="Amazing Grace"
-file3="Holy Water"
-file4="Youre Still God"
+file1="This Is Our God"
+file2="Why Me Lord"
+file3="No Longer Slaves"
+file4="Loving My Jesus"
 file5=""
 file6=""
 
