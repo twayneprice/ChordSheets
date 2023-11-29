@@ -1,8 +1,8 @@
-file1="This Is Our God"
-file2="Why Me Lord"
-file3="No Longer Slaves"
-file4="Loving My Jesus"
-file5=""
+file1="Joy To The World"
+file2="Come All Ye Faithful"
+file3="Me And God"
+file4="There Was Jesus"
+file5="Unclouded Day"
 file6=""
 
 
