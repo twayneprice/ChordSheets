@@ -1,8 +1,8 @@
-file1="Joy To The World"
-file2="Come All Ye Faithful"
-file3="Me And God"
-file4="There Was Jesus"
-file5="Unclouded Day"
+file1="Go Tell It On The Mountain"
+file2="Mary Did You Know"
+file3="Living Hope"
+file4="Goodness Of God"
+file5=""
 file6=""
 
 
