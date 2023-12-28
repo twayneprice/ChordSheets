@@ -1,9 +1,9 @@
-file1="Little Drummer Boy"
-file2="O Holy Night"
-file3="What Child Is This"
-file4="The Angels Cried"
-file5=""
-file6=""
+file1="When the Roll*"
+file2="Well Done"
+file3="My Jesus"
+file4="No Longer Slaves"
+file5="Unclouded Day"
+file6="Fires"
 
 
 convert -page letter+0-10 -pointsize 15 -draw "text 150,2 'Wayne Sells'" "./prints/orig/${file1}.png" "./prints/orig/${file2}.png" "./prints/orig/${file3}.png" "./prints/orig/${file4}.png" "./prints/orig/${file5}.png" "./prints/orig/${file6}.png" -format pdf ./Sunday.pdf
