@@ -1,7 +1,7 @@
-file1="This Is Amazing Grace"
-file2="When the Roll*"
-file3="Me And God"
-file4="Jesus Friend Of Sinners"
+file1="This Is Our God"
+file2="*Fly Away"
+file3="Well Done"
+file4="Scars"
 file5="Unclouded Day"
 file6="Fires"
 
