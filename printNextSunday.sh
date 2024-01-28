@@ -1,7 +1,7 @@
 file1="This Is Our God"
-file2="*Fly Away"
-file3="Well Done"
-file4="Scars"
+file2="The Old Rugged Cross"
+file3="Scars In Heaven"
+file4="Blessed Redeemer"
 file5="Unclouded Day"
 file6="Fires"
 
