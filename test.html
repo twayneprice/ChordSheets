@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout for Print</title>
+    <style>
+        .content {
+            column-count: 2;
+            column-gap: 20px;
+            max-width: 100%;
+            padding: 20px;
+        }
+
+        @media print {
+            body {
+                width: 8.5in;
+                height: 11in;
+                margin: 0;
+                padding: 0;
+                page-break-after: avoid;
+                page-break-before: avoid;
+                page-break-inside: avoid;
+            }
+
+            .content {
+                -webkit-column-count: 2;
+                /* Chrome, Safari, Opera */
+                -moz-column-count: 2;
+                /* Firefox */
+                column-count: 2;
+                column-gap: 20px;
+                width: 100%;
+                max-width: 8.5in;
+                height: 11in;
+                box-sizing: border-box;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content">
+        <ul id="navigation"></ul>
+        <div id="pages">
+            <div class="page">
+                <div class="metadata">
+                </div>
+                <h2 class="title"></h2>
+                <div id="artist" class="author"></div>
+                <p class="nochords">
+                    <span style="font-style:italic">Duration: <span id="duration"
+                            style="font-style:italic"></span></span>
+                    <span style="font-style:italic">Original Key: <span id="originalKey"
+                            style="font-style:italic"></span></span>
+                </p>
+                <p class="nochords">
+                    <span style="font-style:italic">Youtube <span id="youtube" style="font-style:italic"></span></span>
+                    <span style="font-style:italic">Piano: <span id="piano" style="font-style:italic"></span></span>
+                    <span style="font-style:italic">Capo: <span id="capo" style="font-style:italic"></span></span>
+                </p>
+                <div id="notes"></div>
+                <p class="nochords">
+                    <span style="font-style:italic">Flow: <span id="flow" style="font-style:italic"></span></span>
+                </p>
+                <div class="nochords">
+                    <table width="500px">
+                    </table>
+                </div>
+                <div id="sections">
+                </div>
+                <div id="end"></div>
+                <!-- <p>&nbsp;</p> -->
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <Script>
+
+        onSong = `
+        Title: Unclouded Day
+        Artist: AJ Alwood
+        Key: E
+        Capo: 2
+        Tempo: 100
+        Time: 4/4
+        Duration: 04:00
+        Flow: V1 C V2 C V3 C V4 C
+        Youtube: https://www.youtube.com/watch?v=1DWr-6sJvt4
+        BMB Youtube: https://youtu.be/S8sc_U5LQ2A
+        OriginalKey: D
+        Piano: -5
+        Verse 1:
+        [E]O they tell me of a home far be[A]yond the [E]skies,
+        O they tell me of a home [C#m]far   a-[B]way;
+        [B]O they [E]tell me of a home 
+        where no [A]storm-clouds [E]rise,
+        O the tell me [E.]of    [A.]an   [E.]un - [B.]clouded [E]day.
+         
+        Chorus:
+        [E]O the land of cloudless day!
+        O the land of an unclouded [B]sky!
+        [B]O they [E]tell me of a home 
+        where no [A]storm-clouds [E]rise,
+        O the tell me [E.]of    [A.]an   [E.]un - [B.]clouded [E]day.
+         
+        Verse 2:
+        [E]O they tell me of a home 
+        where my [A]friends have [E]gone,
+        O they tell me of that land [C#m]far a-[B]way,
+        [B]Where the [E]tree of life in e-[A]ternal [E]bloom
+        Sheds its fragrance 
+        [E.]through [A.]the[E.] un - [B.]clouded [E]day.
+         
+        Verse 3:
+        [E]O they tell me of a King in His [A]beauty [E]there,
+        And they tell me that mine eyes [C#m]shall be-[B]hold
+        [B]Where He [E]sits on the throne 
+        that is [A]whiter than [E]snow,
+        In the city [E.]that [A.]is   [E.]made [B.]of   [E]gold.
+         
+        Verse 4:
+        [E]O they tell me 
+        that He smiles on His [A]children [E]there,
+        And His smile drives their sorrows [C#m]all   a-[B]way;
+        [B]And they [E]tell me 
+        that no tears ever [A]come a-[E]gain
+        In that lovely [E.]land [A.]of   [E.]un - [B.]clouded [E]day.
+        
+         `
+
+        function parseOnSong(inSong) {
+            // console.log(inSong)
+            inSongArray = inSong.split(/\r?\n/);
+            var song = {};
+            song['notes'] = [];
+            song["sections"] = [];
+            const regEscape = v => v.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+            metadataTypes = ['title', 'artist', 'key', 'key', 'capo', 'tempo', 'time', 'duration', 'flow', 'originalKey', 'piano', 'youtube'];
+            var lastMeta = 0;
+
+            inSongArray.forEach((line, index) => {
+                if (line.includes(':')) {
+                    if (line.indexOf('/') >= 0) { return }
+
+                    metadataTypes.forEach((entry) => {
+                        if (inSong.toUpperCase().includes(entry.toUpperCase() + ':')) {
+                            song[entry] = inSong.split(new RegExp(regEscape(entry + ':'), "ig"))[1].split('\n')[0].trim();
+                            thisMeta = inSong.search(new RegExp(regEscape(entry + ':'), "ig"));
+                            if (thisMeta > lastMeta) { lastMeta = thisMeta };
+                        }
+                    });
+
+                    sectionName = line.split(':')[0]
+
+                    if (metadataTypes.join('|').toUpperCase().indexOf(sectionName.toUpperCase()) >= 0) { return; }
+
+                    var section = {};
+                    section['name'] = sectionName
+                    section['shortNames'] = [];
+                    section['shortNames'].push(sectionName);
+                    nameParts = sectionName.split(' ')
+                    first = nameParts[0].substring(0, 1)
+
+                    if (nameParts.length > 1) {
+                        last = nameParts[1]
+                    } else {
+                        last = ''
+                    }
+
+                    section['shortNames'].push(first + last);
+                    section['startingLine'] = index
+
+                    if (JSON.stringify(song["sections"]).includes('"name":"' + sectionName + '"')) {
+                        section['dupe'] = true
+                    }
+
+                    song["sections"].push(section)
+                }
+            });
+
+            inSongArray.slice(0, song['sections'][0]['startingLine'] - 1).forEach((line, index) => {
+                if (line.trim() == '') { return }
+                sectionName = line.split(':')[0]
+                if (metadataTypes.join('|').toUpperCase().indexOf(sectionName.toUpperCase()) >= 0) { return; }
+                if (line.substring(0, 1) == '/') {
+                    line = line.substring(1);
+                }
+                song["notes"].push(line)
+            });
+
+            song['sections'].forEach((section, index) => {
+                if (index >= song['sections'].length - 1) {
+                    var lastLine = inSongArray.length - 1
+                } else {
+                    var lastLine = song['sections'][index + 1]['startingLine'] - 1
+                }
+                if (inSongArray[lastLine].trim() == '') { lastLine -= 1 }
+
+                song['sections'][index]['lines'] = inSongArray.slice(song['sections'][index]['startingLine'] + 1, lastLine + 1)
+            });
+
+            song['sections'].forEach((section, index) => {
+            });
+
+            // $('.nochords').last().remove();
+
+            console.log(song)
+            return song
+        }
+
+        onSong = onSong.trim()
+        var song = parseOnSong(onSong);
+
+
+    </script>
+
+</body>
+
+</html>
