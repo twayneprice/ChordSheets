@@ -1,7 +1,7 @@
-file1="Holy Water"
-file2="What A Friend We Have In Jesus"
-file3="Less Like Me"
-file4="Fires"
+file1="Loving My Jesus"
+file2="When We All Get To Heaven"
+file3="Goodness Of God"
+file4="O Come To The Alter"
 file5="Unclouded Day"
 file6=""
 
