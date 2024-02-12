@@ -1,7 +1,7 @@
-file1="Loving My Jesus"
-file2="When We All Get To Heaven"
-file3="Goodness Of God"
-file4="O Come To The Alter"
+file1="Youre Still God"
+file2="Victory In Jesus"
+file3="Man Of Sorrows"
+file4="Fires"
 file5="Unclouded Day"
 file6=""
 
