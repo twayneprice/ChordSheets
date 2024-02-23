@@ -15,5 +15,7 @@
         filename=$(basename -- "$f")
         ffmpeg -n -loop 1 -i ./Audio/image.png -i "$f" -c:a copy -c:v libx264 -shortest "./Videos/${filename%.mp3}.mp4"
     done
+5. Upload to YT
+6. Add to Playlist Songs and Sunday
 
 
