@@ -1,7 +1,7 @@
-file1="Forever Reign"
-file2="I Saw The Light"
-file3="Living Hope"
-file4="O Come To The Alter"
+file1="Youre Still God"
+file2="Ill Fly Away"
+file3="Goodness Of God"
+file4="I Lift My Hands"
 file5="Unclouded Day"
 file6=""
 
