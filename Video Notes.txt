@@ -8,8 +8,9 @@
     Download wav
     Copy to Audio folder
 3. Convert wav to mp3
-        for f in ./Audio/*.wav; do lame -V 1 "$f" "${f%.wav}.mp3"; done
-        delete wav files from Audio folder
+    for f in ./Audio/*.wav; do
+        lame -V 1 "$f" "${f%.wav}.mp3" && rm "$f"
+    done
 4. Convert mp3 to mp4
     for f in ./Audio/*.mp3; do
         filename=$(basename -- "$f")
