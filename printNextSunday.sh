@@ -1,8 +1,8 @@
-file1="This Is Amazing Grace"
-file2="Because He Lives"
-file3="Rise Again"
-file4=""
-file5=""
+file1="The Old Rugged Cross"
+file2="There Was Jesus"
+file3="Well Done"
+file4="O Come To The Alter"
+file5="Trust In God"
 file6=""
 file6=""
 
