@@ -1,8 +1,8 @@
-file1="The Old Rugged Cross"
-file2="There Was Jesus"
-file3="Well Done"
-file4="O Come To The Alter"
-file5="Trust In God"
+file1="Fires"
+file2="What A Friend We Have In Jesus"
+file3="Loving My Jesus"
+file4="I Am Not Alone"
+file5="Holy Forever"
 file6=""
 file6=""
 
