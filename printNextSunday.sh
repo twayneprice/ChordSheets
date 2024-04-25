@@ -1,8 +1,8 @@
-file1="Fires"
-file2="What A Friend We Have In Jesus"
-file3="Loving My Jesus"
-file4="I Am Not Alone"
-file5="Holy Forever"
+file1="Ill Fly Away"
+file2="Scars In Heaven"
+file3="I Could Sing Of Your Love Forever"
+file4="Less Like Me"
+file5="Sanctuary"
 file6=""
 file6=""
 
