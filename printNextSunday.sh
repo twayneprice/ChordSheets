@@ -1,9 +1,9 @@
-file1="Ill Fly Away"
-file2="Scars In Heaven"
-file3="I Could Sing Of Your Love Forever"
-file4="Less Like Me"
-file5="Sanctuary"
-file6=""
+file1="My Jesus"
+file2="Amazing Grace"
+file3="Me And God"
+file4="Holy Spirit"
+file5="Trust In God"
+file6="Mamas"
 file6=""
 
 
