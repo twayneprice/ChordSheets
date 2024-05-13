@@ -1,9 +1,9 @@
-file1="My Jesus"
-file2="Amazing Grace"
-file3="Me And God"
-file4="Holy Spirit"
-file5="Trust In God"
-file6="Mamas"
+file1="Mamas"
+file2="Youre Still God"
+file3="Holy Forever"
+file4=""
+file5=""
+file6=""
 file6=""
 
 
