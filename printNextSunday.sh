@@ -1,5 +1,5 @@
-file1="Victory In Jesus"
-file2="Love Without End Amen"
+file1="Love Without End Amen"
+file2="The Old Rugged Cross"
 file3="Me On Your Mind"
 file4="O Come To The Alter"
 file5=""
