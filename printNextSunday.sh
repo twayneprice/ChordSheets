@@ -1,8 +1,8 @@
-file1="When the Roll is Called Up Yonder"
-file2="Why Me Lord"
-file3="Scars In Heaven"
-file4="Holy Forever"
-file5=""
+file1="This Is Amazing Grace"
+file2="The Old Rugged Cross"
+file3="Fires"
+file4="Goodness Of God"
+file5="Jesus Fault"
 file6=""
 file6=""
 
