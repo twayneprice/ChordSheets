@@ -19,4 +19,5 @@
 5. Upload to YT
 6. Add to Playlist Songs and Sunday
 
-
+7. Check out https://lamucal.com/chords/maverick-city-music/mary-did-you-know-177724
+    https://github.com/JoinMusic/fish?tab=readme-ov-file
