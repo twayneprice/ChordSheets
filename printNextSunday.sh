@@ -1,8 +1,8 @@
-file1="This Is Amazing Grace"
-file2="The Old Rugged Cross"
-file3="Fires"
-file4="Goodness Of God"
-file5="Jesus Fault"
+file1="Ill Fly Away"
+file2="Less Like Me"
+file3="Jesus Fault"
+file4="Man Of Sorrows"
+file5=""
 file6=""
 file6=""
 
