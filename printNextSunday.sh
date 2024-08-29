@@ -1,8 +1,8 @@
-file1="Ill Fly Away"
-file2="Less Like Me"
-file3="Jesus Fault"
-file4="Man Of Sorrows"
-file5=""
+file1="My Jesus"
+file2="What A Friend We Have In Jesus"
+file3="Blessed Redeemer"
+file4="Living Hope"
+file5="Unclouded Day"
 file6=""
 file6=""
 
