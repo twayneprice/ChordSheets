@@ -1,9 +1,9 @@
-file1="My Jesus"
-file2="What A Friend We Have In Jesus"
-file3="Blessed Redeemer"
-file4="Living Hope"
+file1="This Is Our God"
+file2="When We All Get To Heaven"
+file3="Me On Your Mind"
+file4="Scars"
 file5="Unclouded Day"
-file6=""
+file6="Trust In God"
 file6=""
 
 
