@@ -1,9 +1,9 @@
-file1="This Is Our God"
-file2="When We All Get To Heaven"
-file3="Me On Your Mind"
-file4="Scars"
+file1="Loving My Jesus"
+file2="Leave It There"
+file3="There Was Jesus"
+file4="Trust In God"
 file5="Unclouded Day"
-file6="Trust In God"
+file6=""
 file6=""
 
 
