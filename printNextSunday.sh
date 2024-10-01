@@ -1,8 +1,8 @@
-file1="Me And God"
-file2="I Saw The Light"
-file3="There Was Jesus"
-file4="Youre Still God"
-file5="Unclouded Day"
+file1="Raise A Hallelujah"
+file2="Unclouded Day"
+file3="No Longer Slaves"
+file4="At The Cross"
+file5=""
 file6=""
 file6=""
 
