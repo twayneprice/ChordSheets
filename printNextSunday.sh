@@ -1,8 +1,8 @@
-file1="Raise A Hallelujah"
-file2="Unclouded Day"
-file3="No Longer Slaves"
-file4="At The Cross"
-file5=""
+file1="Ill Fly Away"
+file2="Holy Forever"
+file3="Less Like Me"
+file4="O Come To The Alter"
+file5="Gratitude"
 file6=""
 file6=""
 
