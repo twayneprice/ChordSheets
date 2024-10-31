@@ -1,8 +1,8 @@
-file1="Ill Fly Away"
-file2="Fires"
-file3="Less Like Me"
-file4="O Come To The Alter"
-file5="Gratitude"
+file1="Homecoming"
+file2="Amazing Grace"
+file3="Medley"
+file4="Trust In God"
+file5=""
 file6=""
 file6=""
 
