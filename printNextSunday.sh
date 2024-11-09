@@ -1,8 +1,8 @@
-file1="Homecoming"
-file2="Amazing Grace"
-file3="Medley"
-file4="Trust In God"
-file5=""
+file1="Battle Hymn Of The Republic"
+file2="Because He Lives"
+file3="Fires"
+file4="At The Cross"
+file5="Gratitude"
 file6=""
 file6=""
 
