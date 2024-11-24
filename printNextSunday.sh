@@ -1,8 +1,8 @@
-file1="This Is Amazing Grace"
-file2="I Have Decided To Follow Jesus"
-file3="Scars In Heaven"
-file4="O Come To The Alter"
-file5="Gratitude"
+file1="What A Friend We Have In Jesus"
+file2="Gratitude"
+file3="Man Of Sorrows"
+file4="Scars"
+file5=""
 file6=""
 file6=""
 
