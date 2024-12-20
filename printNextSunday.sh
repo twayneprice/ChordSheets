@@ -1,8 +1,8 @@
-file1="Go Tell It On The Mountain"
-file2="What Child Is This"
-file3=""
-file4=""
-file5=""
+file1="O Holy Night"
+file2="The Angels Cried"
+file3="What Child Is This"
+file4="Joy To The World"
+file5="Mary Did You Know"
 file6=""
 file6=""
 
