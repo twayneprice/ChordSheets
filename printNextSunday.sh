@@ -1,9 +1,9 @@
-file1="My Jesus"
-file2="He Set Me Free"
-file3="Youre Still God"
-file4="Trust In God"
-file5="Me And God"
-file6=""
+file1="This Is Our God"
+file2="When We All Get To Heaven"
+file3="Jesus Fault"
+file4="Goodness Of God"
+file5="Survivor"
+file6="God So Loved"
 file6=""
 
 
