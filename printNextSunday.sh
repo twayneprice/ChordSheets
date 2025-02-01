@@ -1,4 +1,4 @@
-file1="Raise A Halelujah"
+file1="Raise A Hallelujah"
 file2="Sweet By And By"
 file3="There Was Jesus"
 file4="Holy Forever"
