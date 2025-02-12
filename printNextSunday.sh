@@ -12,3 +12,6 @@ convert -page letter+0-10 -pointsize 15 -draw "text 150,2 'Wayne Sells'" "./prin
 convert -page letter+0-10 -pointsize 15 -draw "text 150,2 'Band'" "./prints/capo/${file1}.png" "./prints/capo/${file2}.png" "./prints/capo/${file3}.png" "./prints/capo/${file4}.png" "./prints/capo/${file5}.png" "./prints/capo/${file6}.png" "./prints/capo/${file7}.png" -format pdf ./Sunday-Capo.pdf
 
 # cd /home/wayne//Documents//Chords/ChordSheets && ./gitPushAll.sh
+
+
+451 564 082
