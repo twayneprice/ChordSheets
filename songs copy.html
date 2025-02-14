@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <script>
+      (async () => {
+        const response = await fetch('/onSong');
+        const data = await response.text;
+        console.log('here')
+        console.log(data)
+        let htmlString = '<ul><font size="+2">';
+        for (let file of data) {
+          htmlString += `<li><a href="onSongViewer.html?file=https://raw.githubusercontent.com/twayneprice/ChordSheets/main/onSong/${file.name}&v=${Math.random()}">${file.name}</a></li>`;
+        }
+        htmlString += '</font></ul>';
+        document.getElementsByTagName('body')[0].innerHTML = htmlString;
+      })()
+    </script>
+  <body>
+</html>
