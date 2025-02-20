@@ -9,10 +9,10 @@ from PyPDF2 import PdfMerger
 
 # List of Sunday songs in the desired order.
 sunday_songs = [
-    "Me And God",
-    "The Old Rugged Cross",
-    "No Longer Slaves",
-    "Scars",
+    "This Is Amazing Grace",
+    "Unclouded Day",
+    "Man Of Sorrows",
+    "At The Cross",
     "Survivor",
     "God So Loved"
 ]
