@@ -3,7 +3,7 @@ git commit -m "new songs"
 git push
 sleep 30
 
-python3 printPDFs.py
+# python3 printPDFs.py
 # python3 printAll.py
 
 # ./printNextSunday.sh
