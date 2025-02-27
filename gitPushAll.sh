@@ -9,5 +9,5 @@ python3 printPDFs.py --sunday-only
 # ./printNextSunday.sh
 
 git add -A
-git commit -m "new songs"
+git commit -m "update pdfs"
 git push
