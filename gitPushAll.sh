@@ -11,3 +11,6 @@ python3 printPDFs.py --sunday-only
 git add -A
 git commit -m "update pdfs"
 git push
+
+
+
