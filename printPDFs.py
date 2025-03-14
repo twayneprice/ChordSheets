@@ -24,7 +24,7 @@ args = parser.parse_args()
 sunday_only = args.sunday_only
 
 # ----- Configuration -----
-base_url = "http://127.0.0.1:5502/onSongViewer.html?file=/onSong/"
+base_url = "http://127.0.0.1:5503/onSongViewer.html?file=/onSong/"
 onsong_folder = "onSong"  # Path to your .onsong files
 temp_pdf_folder = "temp_pdfs"
 os.makedirs(temp_pdf_folder, exist_ok=True)
