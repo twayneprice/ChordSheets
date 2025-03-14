@@ -5,14 +5,14 @@ import argparse
 from PyPDF2 import PdfMerger
 
 
-# python your_script.py --sunday-only
+# python3 printPDFs.py --sunday-only
 
 # List of Sunday songs in the desired order.
 sunday_songs = [
-    "When the Roll is Called Up Yonder",
-    "Jesus Fault",
-    "Why Me Lord",
-    "Youre Still God",
+    "This Is Our God",
+    "Ill Fly Away",
+    "Scars In Heaven",
+    "Fires",
     "Survivor",
     "God So Loved"
 ]
