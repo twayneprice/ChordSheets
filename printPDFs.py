@@ -70,6 +70,7 @@ sunday_pdf_map_capo = {}
 
 for file_name in onsong_files:
     file_url = base_url + file_name
+    print(file_url)
     output_path_regular = os.path.join(temp_pdf_folder, file_name.replace(".onsong", ".pdf"))
     output_path_capo = os.path.join(temp_pdf_folder, file_name.replace(".onsong", "_capo.pdf"))
     
