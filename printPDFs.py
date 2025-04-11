@@ -12,7 +12,8 @@ sunday_songs = [
     "God So Loved",
     "Sweet By And By",
     "Rise Again",
-    "Loving My Jesus"
+    "Loving My Jesus",
+    "Hes Alive"
 ]
 
 # ----- Argument Parsing -----
