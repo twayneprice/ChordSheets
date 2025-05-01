@@ -13,6 +13,7 @@ sunday_songs = [
     "When the Roll is Called Up Yonder",
     "Me And God",
     "At The Cross",
+    "Survivor",
     "The Truth"
 ]
 
