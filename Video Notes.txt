@@ -1,0 +1,32 @@
+https://www.logue.net/xp/
+https://ukegeeks.com/tools/
+
+1. Paste YT video here to get mp3
+    https://ytmp3.nu/
+2. Upload mp3 here
+    https://fadr.com/remix
+    Add vocal and music to remix
+    Adjust tempo and key to match what how we play
+    Export
+    Download wav
+    Copy to Audio folder
+3. Convert wav to mp3
+    for f in ./Audio/*.wav; do
+        lame -V 1 "$f" "${f%.wav}.mp3" && rm "$f"
+    done
+4. Convert mp3 to mp4
+    for f in ./Audio/*.mp3; do
+        filename=$(basename -- "$f")
+        ffmpeg -n -loop 1 -i ./Audio/image.png -i "$f" -c:a copy -c:v libx264 -shortest "./Videos/${filename%.mp3}.mp4"
+    done
+5. Upload to YT
+6. Add to Playlist Songs and Sunday
+
+7. Check out https://lamucal.com/chords/maverick-city-music/mary-did-you-know-177724
+    https://github.com/JoinMusic/fish?tab=readme-ov-file
+
+https://lamucal.com/chords/chris-tomlin/at-the-cross-lyrics-chords-1536565
+
+https://ukegeeks.com/tools/
+https://www.logue.net/
+
