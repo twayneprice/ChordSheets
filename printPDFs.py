@@ -13,7 +13,7 @@ sunday_songs = [
     "Victory In Jesus",
     "No Longer Slaves",
     "Blessed Redeemer",
-    " Im A Winner Either Way"
+    "Im A Winner Either Way"
 ]
 
 # ----- Argument Parsing -----
