@@ -11,7 +11,7 @@ from PyPDF2 import PdfMerger
 sunday_songs = [
     "Ill Fly Away-E",
     "Youre Still God",
-    "Goodness Of God",
+    "Me And God",
     "At The Cross",
     "Made For More"
 ]
